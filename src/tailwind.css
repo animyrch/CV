@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
+/* Mission Statement BlockQuoting */
+blockquote {
+	padding-top: 1rem;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+blockquote:before, blockquote:after { 
+	position: absolute;
+	font-family: Georgia;
+	font-size: 400%;
+	text-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+blockquote:before {
+	content: "“";
+	margin-top: -2rem;
+	margin-left: -2rem;
+}
+blockquote:after { 
+	content: "”";
+}
+

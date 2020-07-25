@@ -1,0 +1,16 @@
+{
+	"navigation": {
+		"next": "Next",
+		"previous": "Previous",
+		"me": "About Me",
+		"work": "Work Experience",
+		"education": "Education",
+		"skills": "Skills",
+		"contact": "Contact Me"
+	},
+	"content": {
+		"name": "Emir Gökhan ÖZÇELİK",
+		"personal": "34 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
+		"mission": "Passionate about application design and development in all of its layers, I am looking for new career opportunities with a larger space to evolve and make a change for the better. I thrive with learning and problem-solving challenges in everyday life and aim to always be better than yesterday."
+	}
+}
