@@ -1,24 +1,72 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { navigation } from '../assets/strings.json';
+//import contact from '../assets/contact.png';
 
 class CvMenu extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {hamburgerFlipped: false};
+	}
+
+	flipHamburger = () => {
+		const hamburgerState = this.state.hamburgerFlipped;
+		this.setState({
+			hamburgerFlipped: !hamburgerState
+		});
+	}
+
+	navMenu = () => {
+		if (this.state.hamburgerFlipped) {
+			return (
+				<nav className="absolute text-center w-full z-50 bg-white mt-10">
+					<div onClick={this.clickedOnPage.bind(this, 1)}>{navigation.me}</div>
+					<div onClick={this.clickedOnPage.bind(this, 2)}>{navigation.work}</div>
+					<div onClick={this.clickedOnPage.bind(this, 3)}>{navigation.education}</div>
+					<div onClick={this.clickedOnPage.bind(this, 4)}>{navigation.skills}</div>
+					<div>{navigation.contact}</div>
+				</nav>
+			);
+		}
+	}
+
+	clickedOnPage = (page) => {
+		this.props.updatePage(page);
+		this.flipHamburger();
+	}
+
+	menuButton = () => {
+		return (
+		<div className="w-12" onClick={this.flipHamburger}>
+			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
+		</div>
+		);
+	}
+
+	contactButton = () => {
+		return (
+		<div className="flex items-center flex-no-shrink text-white mr-6 w-12 -m-4">
+			<img src={require('../assets/contact.png')} alt="My contact information" />
+		</div>
+		);
+	}
+	
 	render() {
 		return (
-			<header>
-				<nav className="flex justify-between">
-				    <div className="contact-button">Contact</div>
-				    <div className="menu-icon">Menu</div>
-			    </nav>
-			    <nav className="menu hidden">
-			        <div>{navigation.me}</div>
-			        <div>{navigation.work}</div>
-			        <div>{navigation.education}</div>
-			        <div>{navigation.skills}</div>
-			        <div>{navigation.contact}</div>
-		        </nav>
-	        </header>
+			<div className="h-12">
+				<header className="fixed top-0 flex items-center justify-between flex-wrap p-2 pt-4 bg-white z-50 w-full">
+					{this.contactButton()}
+					{this.menuButton()}
+				</header>
+				{this.navMenu()}
+			</div>
         );
     }
 };
+
+
+CvMenu.propTypes = {
+	updatePage: PropTypes.func.isRequired
+}
 
 export default CvMenu;

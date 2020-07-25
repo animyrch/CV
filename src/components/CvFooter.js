@@ -1,16 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigation } from '../assets/strings.json';
 
 class CvFooter extends React.Component {
 
 	render() {
 		return (
 			<div>
-				<footer className="flex content-center mt-12">
-					<div className="previous-page w-1/3">{navigation.previous}</div>
+				<footer id="cv-footer" className="flex content-center mt-12 text-center">
+					<button className="nav-button arrow-left w-1/3"></button>
 					<div className="page-number w-1/3">{this.props.page}/4</div>
-					<div className="next-page w-1/3">{navigation.next}</div>
+					<button className="nav-button arrow-right w-1/3"></button>
 				</footer>
 			</div>
 		);
