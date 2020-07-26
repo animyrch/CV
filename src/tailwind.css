@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
 	font-family: 'Nunito', sans-serif;
@@ -27,27 +28,13 @@ ul .white:before {
 }
 
 /* Mission Statement BlockQuoting */
-blockquote {
-	padding-top: 1rem;
-	position: relative;
+.quote {
+	font-family: 'Lobster', sans-serif;
+	font-size: 150px;
+	margin-left: -1rem;
+	margin-bottom: -8rem;
+	margin-top: -4rem;
 }
-blockquote:before, blockquote:after { 
-	position: absolute;
-	font-family: Georgia;
-	font-size: 400%;
-	text-shadow: 0 0 5px rgba(0,0,0,0.4);
-}
-blockquote:before {
-	content: "“";
-	margin-top: -2rem;
-	margin-left: -5rem;
-}
-blockquote:after { 
-	content: "”";
-	margin-left: -2rem;
-}
-
-
 
 /* Hamburger Menu */
 
@@ -116,20 +103,6 @@ blockquote:after {
 
 
 /* navigation buttons */
-
-#cv-footer .nav-button {
-	font-size: 1rem;
-	border: none;
-	background-color: teal;
-	color: white;
-	padding: 5px 30px;
-	border-radius: 10px;
-	cursor: pointer;
-	outline: none;
-	display: flex;
-	align-items: center;
-	position: relative;
-}
 
 #cv-footer .arrow-right:before {
 	content: "";
