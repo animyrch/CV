@@ -2,6 +2,10 @@ import React from 'react';
 import strings from '../assets/strings';
 
 class AboutMe extends React.Component {
+	
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
 
 	render() {
 		return (

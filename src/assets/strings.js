@@ -7,6 +7,7 @@ const strings = {
 		"education": "Education",
 		"skills": "Skills",
 		"contact": {
+			"text": "Contact Me",
 			"alt": "Here are some methods of contacting me",
 			"image": require("../assets/email.png")
 		},
@@ -17,7 +18,7 @@ const strings = {
 			"image": require('../assets/myPhoto.jpg'),
 			"alt": "my photo"
 		},
-		"personal": "34 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
+		"personal": "33 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
 		"mission": "Passionate about application design and development in all of its layers, I am looking for new career opportunities with a larger space to evolve and make a change for the better. I thrive with learning and problem-solving challenges in everyday life and aim to always be better than yesterday.",
 		"workexperience": "Work Experience",
 		"education": "Education",

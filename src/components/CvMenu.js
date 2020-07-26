@@ -10,22 +10,28 @@ class CvMenu extends React.Component {
 	}
 
 	flipHamburger = () => {
-		const hamburgerState = this.state.hamburgerFlipped;
+		const hamburgerOpen = this.state.hamburgerFlipped;
+		if (!hamburgerOpen) {
+			window.scrollTo(0, 0);
+		}
 		this.setState({
-			hamburgerFlipped: !hamburgerState
+			hamburgerFlipped: !hamburgerOpen
 		});
 	}
 
 	navMenu = () => {
 		if (this.state.hamburgerFlipped) {
 			return (
-				<nav className="absolute text-center w-full z-50 bg-white mt-10">
-					<div onClick={this.clickedOnPage.bind(this, 1)}>{strings.navigation.me}</div>
-					<div onClick={this.clickedOnPage.bind(this, 2)}>{strings.navigation.work}</div>
-					<div onClick={this.clickedOnPage.bind(this, 3)}>{strings.navigation.education}</div>
-					<div onClick={this.clickedOnPage.bind(this, 4)}>{strings.navigation.skills}</div>
-					<div>{strings.navigation.contact}</div>
-				</nav>
+				<div>
+					<nav className="absolute text-center text-white w-full z-50 mt-10 -ml-3">
+						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 1)}>{strings.navigation.me}</div>
+						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 2)}>{strings.navigation.work}</div>
+						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 3)}>{strings.navigation.education}</div>
+						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 4)}>{strings.navigation.skills}</div>
+						<div className="bg-blue-500 text-2xl font-medium pb-2">{strings.navigation.contact.text}</div>
+						<div onClick={this.flipHamburger.bind(this)} className="bg-transparent h-screen z-20"></div>
+					</nav>
+				</div>
 			);
 		}
 	}
@@ -54,7 +60,7 @@ class CvMenu extends React.Component {
 	render() {
 		return (
 			<div className="h-12">
-				<header className="fixed top-0 flex items-center justify-between flex-wrap p-2 pt-4 bg-white z-50 w-full">
+				<header className="fixed top-0 flex items-center justify-between flex-wrap p-2 pt-4 bg-white z-40 w-full">
 					{this.contactButton()}
 					{this.menuButton()}
 				</header>

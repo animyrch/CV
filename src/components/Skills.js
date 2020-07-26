@@ -2,7 +2,11 @@ import React from 'react';
 import strings from '../assets/strings';
 
 class Skills extends React.Component {
-
+	
+	componentDidMount() {
+		window.scrollTo(0, 0)
+    }
+    
     simpleSkillItems = (list) => {
         return list.map(
             (listitem, index) => {
@@ -35,7 +39,7 @@ class Skills extends React.Component {
             (listitem, index) => {
                 return (
                     <div key={index} className="inline-block w-1/4">
-                        <div className="ml-4 text-center">{listitem.name}</div>
+                        <div className="ml-4">{listitem.name}</div>
                         <img className="w-2/3 m-auto" src={listitem.image} alt={listitem.name} />
                     </div>
                 );
