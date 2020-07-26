@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { navigation } from '../assets/strings.json';
+import strings from '../assets/strings';
 //import contact from '../assets/contact.png';
 
 class CvMenu extends React.Component {
@@ -20,11 +20,11 @@ class CvMenu extends React.Component {
 		if (this.state.hamburgerFlipped) {
 			return (
 				<nav className="absolute text-center w-full z-50 bg-white mt-10">
-					<div onClick={this.clickedOnPage.bind(this, 1)}>{navigation.me}</div>
-					<div onClick={this.clickedOnPage.bind(this, 2)}>{navigation.work}</div>
-					<div onClick={this.clickedOnPage.bind(this, 3)}>{navigation.education}</div>
-					<div onClick={this.clickedOnPage.bind(this, 4)}>{navigation.skills}</div>
-					<div>{navigation.contact}</div>
+					<div onClick={this.clickedOnPage.bind(this, 1)}>{strings.navigation.me}</div>
+					<div onClick={this.clickedOnPage.bind(this, 2)}>{strings.navigation.work}</div>
+					<div onClick={this.clickedOnPage.bind(this, 3)}>{strings.navigation.education}</div>
+					<div onClick={this.clickedOnPage.bind(this, 4)}>{strings.navigation.skills}</div>
+					<div>{strings.navigation.contact}</div>
 				</nav>
 			);
 		}
@@ -46,7 +46,7 @@ class CvMenu extends React.Component {
 	contactButton = () => {
 		return (
 		<div className="flex items-center flex-no-shrink text-white mr-6 w-12 -m-4">
-			<img src={require('../assets/contact.png')} alt="My contact information" />
+			<img src={strings.navigation.contact.image} alt="My contact information" />
 		</div>
 		);
 	}

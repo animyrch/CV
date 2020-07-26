@@ -1,18 +1,18 @@
 import React from 'react';
 import TimelineElement from './TimelineElement';
-import { content } from '../assets/strings.json';
+import strings from '../assets/strings';
 
 class WorkExperience extends React.Component {
 
 	render() {
 		return (
         <div>
-            <h1 className="page-title underline text-3xl text-center">{content.workexperience}</h1>
+            <h2 className="page-title underline text-3xl text-center">{strings.content.workexperience}</h2>
             <div className="flex">
                 <ul>
                     <div className="border-solid border-l border-gray-700 mx-3">
                     {
-                    content.positions.map(
+                    strings.content.positions.map(
                         (position, index) => 
                             <TimelineElement element={position} key={index} />
                         )

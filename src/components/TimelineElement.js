@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { content } from '../assets/strings.json';
+import strings from '../assets/strings';
 
 class TimelineElement extends React.Component {
 
@@ -16,7 +16,7 @@ class TimelineElement extends React.Component {
         const hasSubdetails = subdetails.length > 0;
         if (hasSubdetails) {
             return (
-                <div className="underline">{content.subdetailsheader}</div>
+                <div className="underline">{strings.content.subdetailsheader}</div>
             )
         }
     }
@@ -25,13 +25,13 @@ class TimelineElement extends React.Component {
         return (
             <div>
                 <span>
-                    {content.timelineperiodstartindicator}
+                    {strings.content.timelineperiodstartindicator}
                 </span>
                 <span className="italic">
                     {element.start}
                 </span> 
                 <span>
-                    {content.timelineperiodendindicator}
+                    {strings.content.timelineperiodendindicator}
                 </span>
                 <span className="italic">
                     {element.end}

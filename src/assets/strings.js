@@ -1,4 +1,4 @@
-{
+const strings = {
 	"navigation": {
 		"next": "Next",
 		"previous": "Previous",
@@ -6,14 +6,24 @@
 		"work": "Work Experience",
 		"education": "Education",
 		"skills": "Skills",
-		"contact": "Contact Me"
+		"contact": {
+			"alt": "Here are some methods of contacting me",
+			"image": require("../assets/email.png")
+		},
 	},
 	"content": {
 		"name": "Emir Gökhan ÖZÇELİK",
+		"myphoto": {
+			"image": require('../assets/myPhoto.jpg'),
+			"alt": "my photo"
+		},
 		"personal": "34 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
 		"mission": "Passionate about application design and development in all of its layers, I am looking for new career opportunities with a larger space to evolve and make a change for the better. I thrive with learning and problem-solving challenges in everyday life and aim to always be better than yesterday.",
 		"workexperience": "Work Experience",
 		"education": "Education",
+		"softskills": "Leading Soft Skills",
+		"hardskills": "Leading Hard Skills",
+		"hobbies": "Hobbies",
 		"timelineperiodstartindicator": " from ",
 		"timelineperiodendindicator": " to ",
 		"subdetailsheader": "Highlights:",
@@ -94,6 +104,94 @@
 				"title": "Bachelor Degree in French Literature - Hacettepe University, Turkey & Toulouse University - Mirail II, France",
 				"subdetails": []
 			}
+		],
+		"softskillslist": [
+			{
+				"noUserInputText": "Job ownership and company citizenship"
+			},
+			{
+				"noUserInputText": "Strong desire for communication and collaboration"
+			},
+			{
+				"noUserInputText": "Enthusiasm for analysis and problem-solving"
+			},
+			{
+				"noUserInputText": "Ease of communication in written and oral forms in Turkish, French and English"
+			}
+		],
+		"hardskillslist": [
+			{
+				"noUserInputText": "TDD (Jest, QUnit, PhpUnit)",
+				"level": 80
+			},
+			{
+				"noUserInputText": "Vue.js",
+				"level": 70
+			},
+			{
+				"noUserInputText": "Node.js",
+				"level": 50
+			},
+			{
+				"noUserInputText": "Php",
+				"level": 90
+			},
+			{
+				"noUserInputText": "Java",
+				"level": 50
+			},
+			{
+				"noUserInputText": "Web MarkUp & Styling",
+				"level": 80
+			},
+			{
+				"noUserInputText": "Microsoft Office",
+				"level": 90
+			},
+			{
+				"noUserInputText": "Adobe XD",
+				"level": 30
+			},
+			{
+				"noUserInputText": "Visual Code Studio",
+				"level": 90
+			},
+			{
+				"noUserInputText": "IntelliJ & Android Studio",
+				"level": 50
+			},
+			{
+				"noUserInputText": "Draw.Io",
+				"level": 60
+			},
+			{
+				"noUserInputText": "Gitlab",
+				"level": 60
+			},
+			{
+				"noUserInputText": "Github",
+				"level": 60
+			}
+		],
+		"hobbieslist": [
+			{
+				"name": "Gaming",
+				"image": require("../assets/game.png")
+			},
+			{
+				"name": "Literature",
+				"image": require("../assets/book.png")
+			},
+			{
+				"name": "Learning",
+				"image": require("../assets/glasses.png")
+			},
+			{
+				"name": "Coding",
+				"image": require("../assets/code.png")
+			}
 		]
 	}
 }
+
+export default strings;
