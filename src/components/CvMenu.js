@@ -23,17 +23,31 @@ class CvMenu extends React.Component {
 		if (this.state.hamburgerFlipped) {
 			return (
 				<div>
-					<nav className="absolute text-center text-white w-full z-50 mt-10 -ml-3">
-						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 1)}>{strings.navigation.me}</div>
-						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 2)}>{strings.navigation.work}</div>
-						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 3)}>{strings.navigation.education}</div>
-						<div className="bg-blue-500 text-2xl font-medium pb-2" onClick={this.clickedOnPage.bind(this, 4)}>{strings.navigation.skills}</div>
-						<div className="bg-blue-500 text-2xl font-medium pb-2">{strings.navigation.contact.text}</div>
-						<div onClick={this.flipHamburger.bind(this)} className="bg-transparent h-screen z-20"></div>
+					<nav className="absolute text-center text-white w-full z-20 mt-10 -ml-3">
+						{this.navMenuItem(this.clickedOnPage, 1, strings.navigation.me)}
+						{this.navMenuItem(this.clickedOnPage, 2, strings.navigation.work)}
+						{this.navMenuItem(this.clickedOnPage, 3, strings.navigation.education)}
+						{this.navMenuItem(this.clickedOnPage, 4, strings.navigation.skills)}
+						{this.navMenuItem(this.props.toggleContactModal, null, strings.navigation.contact.text)}
+						<div 
+							onClick={this.flipHamburger.bind(this)} 
+							className="bg-transparent h-screen z-20"
+							/>
 					</nav>
 				</div>
 			);
 		}
+	}
+
+	navMenuItem = (onClickMethod, bindValue, itemText) => {
+		return (
+		<div 
+			className="bg-teal-500 text-2xl font-medium pb-2" 
+			onClick={onClickMethod.bind(this, bindValue)}
+			>
+			{itemText}
+		</div>
+		);
 	}
 
 	clickedOnPage = (page) => {
@@ -43,7 +57,10 @@ class CvMenu extends React.Component {
 
 	menuButton = () => {
 		return (
-		<div className="w-12" onClick={this.flipHamburger}>
+		<div 
+			className="w-12" 
+			onClick={this.flipHamburger}
+			>
 			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
 		</div>
 		);
@@ -51,7 +68,10 @@ class CvMenu extends React.Component {
 
 	contactButton = () => {
 		return (
-		<div className="flex items-center flex-no-shrink text-white mr-6 w-12 -m-4">
+		<div 
+			onClick={this.props.toggleContactModal.bind(this)}
+			className="flex items-center flex-no-shrink mr-6 w-12 -m-4"
+			>
 			<img src={strings.navigation.contact.image} alt="My contact information" />
 		</div>
 		);
@@ -60,7 +80,9 @@ class CvMenu extends React.Component {
 	render() {
 		return (
 			<div className="h-12">
-				<header className="fixed top-0 flex items-center justify-between flex-wrap p-2 pt-4 bg-white z-40 w-full">
+				<header 
+					className="fixed top-0 flex items-center justify-between flex-wrap p-2 pt-4 bg-white z-30 w-full"
+					>
 					{this.contactButton()}
 					{this.menuButton()}
 				</header>
@@ -72,7 +94,8 @@ class CvMenu extends React.Component {
 
 
 CvMenu.propTypes = {
-	updatePage: PropTypes.func.isRequired
+	updatePage: PropTypes.func.isRequired,
+	toggleContactModal: PropTypes.func.isRequired
 }
 
 export default CvMenu;

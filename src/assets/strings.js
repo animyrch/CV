@@ -28,6 +28,38 @@ const strings = {
 		"timelineperiodstartindicator": " from ",
 		"timelineperiodendindicator": " to ",
 		"subdetailsheader": "Highlights:",
+		"contactmethods": [
+			{
+				"logo": require("../assets/phone.png"),
+				"alt": "my telepĥone",
+				"noUserInputText": "<a href='tel:+33603240059'>(0033) 603240059</a>"
+			},
+			{
+				"logo": require("../assets/mail.png"),
+				"alt": "my e-mail",
+				"noUserInputText": "<a target='_blank' href='mailto:emirgokhanozcelik@gmail.com'>emirgokhanozcelik@gmail.com</a>"
+			},
+			{
+				"logo": require("../assets/website.png"),
+				"alt": "my website",
+				"noUserInputText": "<a target='_blank' href='https://emirdev.com'>emirdev.com</a>"
+			},
+			{
+				"logo": require("../assets/in.png"),
+				"alt": "my linkedin profile",
+				"noUserInputText": "<a target='_blank' href='https://linkedin.com/in/emirozcelik'>linkedin.com/in/emirozcelik</a>"
+			},,
+			{
+				"logo": require("../assets/github.png"),
+				"alt": "my github",
+				"noUserInputText": "<a target='_blank' href='https://github.com/animyrch'>github.com/animyrch</a>"
+			},
+			{
+				"logo": require("../assets/download.png"),
+				"alt": "Download this as CV",
+				"noUserInputText": "Download this as CV"
+			},
+		],
 		"positions": [
 			{
 				"start": "2020-05",
