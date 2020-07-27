@@ -104,54 +104,63 @@ ul .white:before {
 
 /* navigation buttons */
 
-#cv-footer .arrow-right:before {
-	content: "";
-	display: block;
-	margin-right: 10px;
-	width: 8px;
-	height: 8px;
-	border-top: 2px solid white;
-	border-right: 2px solid white;
-	transform: rotate(45deg);
-	right: 6px;
-	position: absolute;
-}
-#cv-footer .arrow-right:after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 16px;
-	height: 2px;
-	background-color: white;
-	right: 16px;
-}
-  
-#cv-footer .arrow-left:before {
-	content: "";
-	display: block;
-	margin-right: 15px;
-	width: 8px;
-	height: 8px;
-	border-top: 2px solid white;
-	border-right: 2px solid white;
-	transform: rotate(225deg);
-	position: absolute;
-	left: 16px;
-}
-#cv-footer .arrow-left:after {
-	content: "";
-	display: block;
-	position: absolute;
-	width: 16px;
-	height: 2px;
-	background-color: white;
-	left: 16px;
+.arrow-right:before, .arrow-left:before {
+  /*@apply absolute w-5 h-5 block border-t-4 border-r-4 border-solid border-white rounded;*/
+  content: "";
+  display: block;  
+	width: 20px;
+	height: 20px;
+	border-top: 4px solid white;
+	border-right: 4px solid white;
+  border-radius: 4px;
+  position: absolute;
 }
 
+.arrow-left:after, .arrow-right:after {
+  /*@apply absolute w-10 h-1 block bg-white;*/
+	content: "";
+	display: block;
+	position: absolute;
+	width: 12%;
+	height: 5px;
+	background-color: white;
+}
+
+.arrow-right:before {
+/*  @apply rotate-45 right-0;*/
+	transform: rotate(45deg);
+	right: 26px;
+}
+.arrow-right:after {
+/*  @apply right-0;*/
+	right: 26px;
+}
+  
+.arrow-left:before {
+/* @apply left-0 -rotate-45;*/
+	left: 26px;
+	transform: rotate(225deg);
+}
+
+.arrow-left:after {
+/*  @apply left-0;*/
+	left: 26px;
+}
+
+@media (min-width: 768px) {  
+  .arrow-right:after, .arrow-left:after {
+    /*@apply w-6;*/
+    width: 8%;
+  }
+}
 
 /* personalized meter */
 
-meter{
+.inline-list-disc {
+	display: inline flow-root list-item !important;
+}
+
+meter {
 	width: 100%;
 	position: absolute;
 }

@@ -19,9 +19,9 @@ class Skills extends React.Component {
         return list.map(
             (listitem, index) => {
                 return (
-                    <div className="pt-6" key={index}>
-                        <li className="list-disc ml-4" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
-                        <p className="styled">
+                    <div className="pt-6 md:table-row" key={index}>
+                        <li className="md:table-cell md:px-4 list-disc ml-4" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
+                        <p className="styled md:w-1/2 md:table-cell md:align-middle">
                             {this.skillMeter(listitem.level)}
                         </p>
                     </div>
@@ -31,16 +31,16 @@ class Skills extends React.Component {
     }
 
     skillMeter = (level) => {
-        return <meter min="0" max="100" low="35" high="70" optimum="100" value={level}></meter>;
+        return <meter className="md:w-2/5" min="0" max="100" low="35" high="70" optimum="100" value={level}></meter>;
     }
 
     hobbyItems = (list) => {
         return list.map(
             (listitem, index) => {
                 return (
-                    <div key={index} className="inline-block w-1/4">
-                        <div className="ml-4">{listitem.name}</div>
-                        <img className="w-2/3 m-auto" src={listitem.image} alt={listitem.name} />
+                    <div key={index} className="">
+                        <div className="text-center">{listitem.name}</div>
+			    <img className="w-2/3 md:w-1/4 m-auto" src={listitem.image} alt={listitem.name} />
                     </div>
                 );
             }
@@ -55,11 +55,11 @@ class Skills extends React.Component {
                     {this.simpleSkillItems(strings.content.softskillslist)}
                 </ul>
                 <h2 className="page-title underline text-3xl text-center">{strings.content.hardskills}</h2>
-                <ul>
+                <ul className="md:table">
                     {this.complexeSkillItems(strings.content.hardskillslist)}
                 </ul>
                 <h2 className="page-title underline text-3xl text-center pt-3">{strings.content.hobbies}</h2>
-                <div>
+                <div className="flex content-center">
                     {this.hobbyItems(strings.content.hobbieslist)}
                 </div>
 			</div>

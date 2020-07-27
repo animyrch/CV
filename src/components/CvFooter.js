@@ -24,7 +24,7 @@ class CvFooter extends React.Component {
 			return (
 			<button 
 				onClick={this.props.goToNextPage.bind()} 
-				className="nav-button arrow-right flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none"
+        className="nav-button arrow-right flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none"
 				/>
 			);
 		}
