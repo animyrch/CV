@@ -48,7 +48,7 @@ const strings = {
 				"logo": require("../assets/in.png"),
 				"alt": "my linkedin profile",
 				"noUserInputText": "<a target='_blank' href='https://linkedin.com/in/emirozcelik'>linkedin.com/in/emirozcelik</a>"
-			},,
+			},
 			{
 				"logo": require("../assets/github.png"),
 				"alt": "my github",

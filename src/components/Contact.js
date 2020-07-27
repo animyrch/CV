@@ -42,11 +42,11 @@ class Contact extends React.Component {
 				className="popup absolute h-auto mx-auto left-0 right-0 p-2 mt-20 bg-white border border-solid border-gray-800 w-11/12 shadow-lg z-50"
 				>
 				<div>
-					<a
+					<button
 						className="flex justify-end -mt-4 opacity-80 text-4xl font-medium"
 						>
 						&times;
-					</a>
+					</button>
 					{this.contactMethods()}
 				</div>
 			</div>
