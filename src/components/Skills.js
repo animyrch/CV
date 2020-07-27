@@ -20,8 +20,8 @@ class Skills extends React.Component {
             (listitem, index) => {
                 return (
                     <div className="pt-6 md:table-row" key={index}>
-                        <li className="md:table-cell md:px-4 list-disc ml-4" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
-                        <p className="styled md:w-1/2 md:table-cell md:align-middle">
+                      <li className="md:table-cell md:px-4 list-disc ml-4 md:text-right" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
+                      <p className="styled md:w-1/2 md:table-cell md:align-middle md:text-left">
                             {this.skillMeter(listitem.level)}
                         </p>
                     </div>
@@ -40,7 +40,7 @@ class Skills extends React.Component {
                 return (
                     <div key={index} className="">
                         <div className="text-center">{listitem.name}</div>
-			    <img className="w-2/3 md:w-1/4 m-auto" src={listitem.image} alt={listitem.name} />
+              			    <img className="w-2/3 md:w-1/4 m-auto" src={listitem.image} alt={listitem.name} />
                     </div>
                 );
             }
@@ -55,7 +55,7 @@ class Skills extends React.Component {
                     {this.simpleSkillItems(strings.content.softskillslist)}
                 </ul>
                 <h2 className="page-title underline text-3xl text-center">{strings.content.hardskills}</h2>
-                <ul className="md:table">
+        <ul className="md:table ">
                     {this.complexeSkillItems(strings.content.hardskillslist)}
                 </ul>
                 <h2 className="page-title underline text-3xl text-center pt-3">{strings.content.hobbies}</h2>
