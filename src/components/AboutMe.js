@@ -18,7 +18,7 @@ class AboutMe extends React.Component {
 				<div className="my-name text-2xl text-center">{strings.content.name}</div>
 				<div className="personal-summary text-center pb-4">{strings.content.personal}</div>
 				<div className="quote">“</div>
-				<div className="mission-statement text-xl text-indent">{strings.content.mission}</div>
+        <div className="mission-statement text-xl text-indent"><em>{strings.content.mission}</em></div>
 				<div className="quote text-right">”</div>
 			</div>
 		);

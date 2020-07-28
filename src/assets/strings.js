@@ -7,9 +7,9 @@ const strings = {
 		"education": "Education",
 		"skills": "Skills",
 		"contact": {
-			"text": "Contact Me",
+			"text": "Get In Touch",
 			"alt": "Here are some methods of contacting me",
-			"image": require("../assets/email.png")
+			"image": require("../assets/contact5.png")
 		},
 	},
 	"content": {
@@ -32,7 +32,7 @@ const strings = {
 			{
 				"logo": require("../assets/phone.png"),
 				"alt": "my telepĥone",
-				"noUserInputText": "<a href='tel:+33603240059'>(0033) 603240059</a>"
+				"noUserInputText": "<a href='tel:+33603240059'>(0033) 6 03 24 00 59</a>"
 			},
 			{
 				"logo": require("../assets/mail.png"),
@@ -42,7 +42,7 @@ const strings = {
 			{
 				"logo": require("../assets/website.png"),
 				"alt": "my website",
-				"noUserInputText": "<a target='_blank' href='https://emirdev.com'>emirdev.com</a>"
+				"noUserInputText": "<a target='_blank' href='https://www.emir.rocks'>emir.rocks</a>"
 			},
 			{
 				"logo": require("../assets/in.png"),
@@ -80,7 +80,7 @@ const strings = {
 						"noUserInputText": "Proposed, designed, developed and deployed several modules on an existing internal Web platform for database transfer and configuration in <span class='italic'>Twig, CSS, Vue.js, Php,</span> and <span class='italic'>Mysql</span> with <span class='italic'>TDD</span>"
 					},
 					{
-						"noUserInputText": "Proposed and developed a proof-of-concept mobile app for public reservation platform in <span class='italic'>Flutter-Dart</span> (I learned it for this project), <span class='italic'>MongoDB</span> (with Firebase) and <span class='italic'>Node.js</span>"
+            "noUserInputText": "Proposed and developed a proof-of-concept mobile app for public reservation platform in <span class='italic'>Flutter-Dart</span> (I learned it for this project), <span class='italic'>MongoDB</span> and <span class='italic'>Node.js</span> for <span class='italic'>Android</span> and <span class='italic'>IOS</span>",
 					}
 				]
 			},
@@ -90,10 +90,10 @@ const strings = {
 				"title": "Personal Projects",
 				"subdetails": [
 					{
-						"noUserInputText": "Started the Turkish version of the official <span class='italic'>Vue.js Documentation Website</span>."
+						"noUserInputText": "Started the Turkish version of the official <span class='italic'>Vue.js Documentation Website</span> (on my Github)"
 					},
 					{
-						"noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span>."
+						"noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span> (still hosted at traductionturcfrancais.com)"
 					},
 					{
 						"noUserInputText": "Self-taught, designed, built and deployed two basic <span class='italic'>Android</span> apps, one for teaching phonetics and another one for teaching grammar."
@@ -111,10 +111,10 @@ const strings = {
 			{
 				"start": "2018",
 				"end": "2020",
-				"title": "Bachelor Degree in Software Application Development",
+				"title": "Bachelor's Degree in Software Application Development - AP Formation, Toulouse, France",
 				"subdetails": [
 					{
-						"noUserInputText": "Lectures and small projects in Javascript, Typescript, Angular 2, Agile Development and Application Design, MySQL, Php, CodeIgniter, Java SE, Java EE, Spring, Hibernate, Android and Node.js"
+            "noUserInputText": "Lectures and small projects in <span class='italic'>Javascript, Typescript, Angular 2, Agile Development and Application Design, MySQL, Php, CodeIgniter, Java SE, Java EE, Spring, Hibernate, Android</span> and <span class='italic'>Node.js</span>"
 					},
 					{
 						"noUserInputText": "Term Project: Design choices and best practices for an internal database transfer application."
@@ -122,9 +122,9 @@ const strings = {
 				]
 			},
 			{
-				"start": "2018",
-				"end": "2020",
-				"title": "Master's Degree in Linguistics and Translation",
+				"start": "2013",
+				"end": "2011",
+				"title": "Master's Degree in Linguistics and Translation - Strasbourg University, ITIRI, France",
 				"subdetails": [
 					{
 						"noUserInputText": "Term Project : Linguistic analysis and translation of 'Turcs et Grecs : Entre Eris et Eros au tournant du siècle', a socio-political research book about Turkish-Greek relations."
@@ -134,7 +134,7 @@ const strings = {
 			{
 				"start": "2004",
 				"end": "2009",
-				"title": "Bachelor Degree in French Literature - Hacettepe University, Turkey & Toulouse University - Mirail II, France",
+				"title": "Bachelor's Degree in French Literature - Hacettepe University, Turkey & Toulouse University - Mirail II, France",
 				"subdetails": []
 			}
 		],

@@ -40,7 +40,7 @@ class Skills extends React.Component {
                 return (
                     <div key={index} className="">
                         <div className="text-center">{listitem.name}</div>
-              			    <img className="w-2/3 md:w-1/4 m-auto" src={listitem.image} alt={listitem.name} />
+              			    <img className="w-2/3 md:w-2/5 m-auto" src={listitem.image} alt={listitem.name} />
                     </div>
                 );
             }

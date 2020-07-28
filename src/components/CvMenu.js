@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../assets/strings';
-//import contact from '../assets/contact.png';
 
 class CvMenu extends React.Component {
 	constructor(props) {
@@ -58,7 +57,7 @@ class CvMenu extends React.Component {
 	menuButton = () => {
 		return (
 		<div 
-			className="w-12 pt-2" 
+			className="w-12" 
 			onClick={this.flipHamburger}
 			>
 			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
@@ -70,9 +69,9 @@ class CvMenu extends React.Component {
 		return (
 		<div 
 			onClick={this.props.toggleContactModal.bind(this)}
-			className="flex items-center flex-no-shrink mr-6 w-16 -m-4"
+      className="flex items-center flex-no-shrink mr-6 w-16 mt-1"
 			>
-			<img className="-mt-3 h-10" src={strings.navigation.contact.image} alt="My contact information" />
+			<img className="-mt-2" src={strings.navigation.contact.image} alt="My contact information" />
 		</div>
 		);
 	}

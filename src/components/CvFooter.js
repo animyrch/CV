@@ -33,13 +33,16 @@ class CvFooter extends React.Component {
 	contactButton = () => {
 		if (this.props.page === 4) {
 			return (
-			<input 
-				className="arrow-right h-16" 
-				type="image" 
-				src={strings.navigation.contact.image} 
-				alt="My contact information"
-				onClick={this.props.toggleContactModal.bind(this)} 
-				/>
+      <div className="-ml-5 -mt-5">
+			  <input 
+				  className="arrow-right h-16 block" 
+				  type="image" 
+				  src={strings.navigation.contact.image} 
+				  alt="My contact information"
+				  onClick={this.props.toggleContactModal.bind(this)} 
+				  />
+          <strong>{strings.navigation.contact.text}</strong> 
+      </div>
 			);
 		}
 	}
@@ -51,7 +54,7 @@ class CvFooter extends React.Component {
 					{this.goBackInNavigation()}
 					<div className="page-number w-1/3">{this.props.page}/4</div>
 					{this.buildContinueNavigation()}
-					{this.contactButton()}
+          {this.contactButton()}
 				</footer>
 			</div>
 		);
