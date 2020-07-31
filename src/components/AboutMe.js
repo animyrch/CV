@@ -15,10 +15,11 @@ class AboutMe extends React.Component {
 					alt={strings.content.myphoto.alt} 
 					className="w-1/4 md:w-2/12 m-auto rounded-full" 
 					/>
-				<div className="my-name text-2xl text-center">{strings.content.name}</div>
+				<div className="my-name text-3xl text-center">{strings.content.name}</div>
+				<div className="my-title text-2xl text-center">{strings.content.title}</div>
 				<div className="personal-summary text-center pb-4">{strings.content.personal}</div>
 				<div className="quote">“</div>
-        <div className="mission-statement text-xl text-indent"><em>{strings.content.mission}</em></div>
+				<div className="mission-statement text-xl text-indent" dangerouslySetInnerHTML={{__html: strings.content.mission}} />
 				<div className="quote text-right">”</div>
 			</div>
 		);

@@ -3,7 +3,7 @@ const strings = {
 		"next": "Next",
 		"previous": "Previous",
 		"me": "About Me",
-		"work": "Work Experience",
+		"work": "Professional Experience",
 		"education": "Education",
 		"skills": "Skills",
 		"contact": {
@@ -18,9 +18,11 @@ const strings = {
 			"image": require('../assets/myPhoto.jpg'),
 			"alt": "my photo"
 		},
+		"title": "Full-Stack Developer",
 		"personal": "33 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
-		"mission": "Passionate about application design and development in all of its layers, I am looking for new career opportunities with a larger space to evolve and make a change for the better. I thrive with learning and problem-solving challenges in everyday life and aim to always be better than yesterday.",
-		"workexperience": "Work Experience",
+		"missionTitle": "Mission",
+		"mission": "Passionate about <strong>application design and development</strong> in all of its layers, I am looking for new career opportunities with a <em>larger space to evolve and make a change for the better</em>. I thrive with <em>learning and problem-solving challenges</em> in everyday life and aim to always be better than yesterday.",
+		"workexperience": "Professional Experience",
 		"education": "Education",
 		"softskills": "Leading Soft Skills",
 		"hardskills": "Leading Hard Skills",
@@ -42,29 +44,29 @@ const strings = {
 			{
 				"logo": require("../assets/website.png"),
 				"alt": "my website",
-				"noUserInputText": "<a target='_blank' href='https://www.emir.rocks'>emir.rocks</a>"
+				"noUserInputText": "<a target='_blank' href='https://www.emir.rocks'>www.emir.rocks</a>"
 			},
 			{
 				"logo": require("../assets/in.png"),
 				"alt": "my linkedin profile",
-				"noUserInputText": "<a target='_blank' href='https://linkedin.com/in/emirozcelik'>linkedin.com/in/emirozcelik</a>"
+				"noUserInputText": "<a target='_blank' href='https://linkedin.com/in/emirozcelik'>/emirozcelik</a>"
 			},
 			{
 				"logo": require("../assets/github.png"),
 				"alt": "my github",
-				"noUserInputText": "<a target='_blank' href='https://github.com/animyrch'>github.com/animyrch</a>"
+				"noUserInputText": "<a target='_blank' href='https://github.com/animyrch'>/animyrch</a>"
 			},
 			{
 				"logo": require("../assets/download.png"),
 				"alt": "Download this as CV",
-				"noUserInputText": "Download this as CV"
+				"noUserInputText": "<a target='_blank' href='/EmirOZCELIK-CV.pdf' download>Download this as CV</a>"
 			},
 		],
 		"positions": [
 			{
 				"start": "2020-05",
 				"end": "present",
-				"title": "Full-Stack Application Developer, Junior",
+				"title": "Full-Stack Application Developer, Junior at Lodecom, Saint-Sulpice/France",
 				"subdetails": [
 					{
 						"noUserInputText": "Charged with complete rethinking of the public reservation Web platform in <span class='italic'>Less, Vue.js, Node.js</span> and <span class='italic'>Sequelize</span> with <span class='italic'>TDD</span>"
@@ -74,7 +76,7 @@ const strings = {
 			{
 				"start": "2018-09",
 				"end": "2020-04",
-				"title": "Full-Stack Application Developer (Internship)",
+				"title": "Full-Stack Application Developer (Internship) at Lodecom, Saint-Sulpice/France",
 				"subdetails": [
 					{
 						"noUserInputText": "Proposed, designed, developed and deployed several modules on an existing internal Web platform for database transfer and configuration in <span class='italic'>Twig, CSS, Vue.js, Php,</span> and <span class='italic'>Mysql</span> with <span class='italic'>TDD</span>"
@@ -103,7 +105,7 @@ const strings = {
 			{
 				"start": "2006",
 				"end": "2018",
-				"title": "Translation & Interpretation",
+				"title": "Freelance Translator & Interpreter in Turkish, French and English",
 				"subdetails": []
 			}
 		],
@@ -111,7 +113,7 @@ const strings = {
 			{
 				"start": "2018",
 				"end": "2020",
-				"title": "Bachelor's Degree in Software Application Development - AP Formation, Toulouse, France",
+				"title": "Bachelor's Degree in Software Application Development - AP Formation, Toulouse/France",
 				"subdetails": [
 					{
             "noUserInputText": "Lectures and small projects in <span class='italic'>Javascript, Typescript, Angular 2, Agile Development and Application Design, MySQL, Php, CodeIgniter, Java SE, Java EE, Spring, Hibernate, Android</span> and <span class='italic'>Node.js</span>"
@@ -122,8 +124,8 @@ const strings = {
 				]
 			},
 			{
-				"start": "2013",
-				"end": "2011",
+				"start": "2011",
+				"end": "2013",
 				"title": "Master's Degree in Linguistics and Translation - Strasbourg University, ITIRI, France",
 				"subdetails": [
 					{
@@ -172,6 +174,10 @@ const strings = {
 			{
 				"noUserInputText": "Java",
 				"level": 50
+			},
+			{
+				"noUserInputText": "MySQL",
+				"level": 90
 			},
 			{
 				"noUserInputText": "Web MarkUp & Styling",

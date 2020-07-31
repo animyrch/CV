@@ -15,18 +15,30 @@ body {
 }
 
 /* Timeline dots */
-ul .white {
+ul .bullet {
 	padding-bottom: 2.5em;
 	position: relative;
 	list-style: none;
 }
 
-ul .white:before {
-	content: url('assets/whitedot.png');
+ul .bullet:before{
+	/*content: url('assets/whitedot.png');*/
 	position: absolute;
 	left: -27px;
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('assets/whitedot.png');
+	background-size: 100%;
 }
 
+ul .bullet-file:before{
+	left: -24px;
+	top: 5px;
+	width: 15px;
+	height: 15px;
+}
 /* Mission Statement BlockQuoting */
 .quote {
 	font-family: 'Lobster', sans-serif;
