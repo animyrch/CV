@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../assets/strings';
 
-class TimelineElement extends React.Component {
+class TimelineElementFile extends React.Component {
 
     generateSubdetail = (subdetail, index) => {
         return (
-        <li className="list-disc ml-4 z-50" key={index}>
+        <li className="list-disc ml-8 z-50" key={index}>
             <div dangerouslySetInnerHTML={{__html: subdetail.noUserInputText}}></div>
         </li>
         );
@@ -42,13 +42,12 @@ class TimelineElement extends React.Component {
 
 	render() {
 		return (
-        <li className="bullet list-outside mx-4 pb-5 border-b border-gray-400">
-            <div className="text-base">
+        <li className="bullet bullet-file list-outside mx-4 pb-2 border-b border-gray-100">
+            <div className="">
                 {this.generatePeriod(this.props.element)}
             </div>
-            <div className="font-bold">{this.props.element.title}</div>
+            <div className="font-bold text-2xl">{this.props.element.title}</div>
             <ul>
-                {this.generateSubdetailsTitle(this.props.element.subdetails)}
                 {
                 this.props.element.subdetails.map(
                     (subdetail, index) => this.generateSubdetail(subdetail, index)
@@ -60,9 +59,9 @@ class TimelineElement extends React.Component {
 	}
 }
 
-TimelineElement.propTypes = {
+TimelineElementFile.propTypes = {
     element: PropTypes.object.isRequired,
 }
 
-export default TimelineElement;
+export default TimelineElementFile;
 

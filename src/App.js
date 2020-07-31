@@ -1,11 +1,18 @@
 import React from 'react';
 import CvMenu from './components/CvMenu';
 import AboutMe from './components/AboutMe';
+import AboutMeFile from './components/AboutMeFile';
+import MissionFile from './components/MissionFile';
 import WorkExperience from './components/WorkExperience';
+import WorkExperienceFile from './components/WorkExperienceFile';
 import Education from './components/Education';
+import EducationFile from './components/EducationFile';
 import Skills from './components/Skills';
+import SkillsFile from './components/SkillsFile';
 import CvFooter from './components/CvFooter';
 import Contact from './components/Contact';
+import ContactFile from './components/ContactFile';
+import FileSeparator from './components/FileSeparator';
 
 class App extends React.Component {
 
@@ -58,22 +65,34 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<div className="App p-3 text-lg text-gray-800">
-					{this.displayContactModal()}
-					<CvMenu 
-						updatePage={this.updatePage} 
-						toggleContactModal={this.toggleContactModalState} 
-						/>
-					{this.buildBody()}
-					<CvFooter 
-						page={this.state.page} 
-						goToNextPage={this.goToNextPage} 
-						goToPreviousPage={this.goToPreviousPage}
-						toggleContactModal={this.toggleContactModalState} 						
-						/>
-				</div>
+		<div>
+			<div className="App mobile-view p-3 text-lg text-gray-800">
+				{this.displayContactModal()}
+				<CvMenu 
+					updatePage={this.updatePage} 
+					toggleContactModal={this.toggleContactModalState} 
+					/>
+				{this.buildBody()}
+				<CvFooter 
+					page={this.state.page} 
+					goToNextPage={this.goToNextPage} 
+					goToPreviousPage={this.goToPreviousPage}
+					toggleContactModal={this.toggleContactModalState}       
+					/>
 			</div>
+			<div className="App file-view pl-8 text-gray-800 text-lg hidden">
+				<AboutMeFile />
+				<ContactFile />
+				<FileSeparator />
+				<MissionFile />
+				<FileSeparator />
+				<WorkExperienceFile />
+				<FileSeparator />
+				<EducationFile />
+				<FileSeparator />
+				<SkillsFile />
+			</div>
+		</div>	
 		);
 	}
 }
