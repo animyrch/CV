@@ -12,9 +12,9 @@ class ContactFile extends React.Component {
 					return (
 						<div 
 							key={index} 
-							className="flex flex-row mr-4">
+							className="flex flex-row">
 							<img 
-								className="h-8 mr-1" 
+								className="h-4 mr-1 ml-1" 
 								src={contactmethod.logo} alt={contactmethod.alt} 
 								/>
 							<div 
@@ -30,7 +30,7 @@ class ContactFile extends React.Component {
 
 	render() {
 		return (
-			<div className="flex flex-row justify-center">
+			<div className="flex flex-row ">
 					{this.contactMethods()}
 			</div>
 		);

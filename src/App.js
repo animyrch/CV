@@ -80,7 +80,8 @@ class App extends React.Component {
 					toggleContactModal={this.toggleContactModalState}       
 					/>
 			</div>
-			<div className="App file-view pl-8 text-gray-800 text-lg hidden">
+		
+			<div className="App file-view p-3 pb-0 text-gray-800 text-sm leading-tight">
 				<AboutMeFile />
 				<ContactFile />
 				<FileSeparator />

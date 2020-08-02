@@ -34,10 +34,10 @@ ul .bullet:before{
 }
 
 ul .bullet-file:before{
-	left: -24px;
-	top: 5px;
-	width: 15px;
-	height: 15px;
+	left: -22px;
+	top: 1px;
+	width: 10px;
+	height: 10px;
 }
 /* Mission Statement BlockQuoting */
 .quote {
@@ -229,3 +229,18 @@ meter {
 .styled meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
 	background: #CC4600;
 }
+
+
+@media screen {
+	.file-view {
+		display: none;
+	}
+}
+
+@media print {
+	.mobile-view {
+		display: none;
+		-webkit-print-color-adjust: exact;
+	}
+}
+

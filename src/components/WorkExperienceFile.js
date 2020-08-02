@@ -1,15 +1,16 @@
 import React from 'react';
 import TimelineElementFile from './TimelineElementFile';
+import SectionTitleFile from './SectionTitleFile';
 import strings from '../assets/strings';
 
 class WorkExperienceFile extends React.Component {
 	render() {
 		return (
         <div>
-            <h2 className="underline text-4xl">{(strings.content.workexperience).toUpperCase()}</h2>
+			<SectionTitleFile title={strings.content.workexperience} />
             <div className="flex">
                 <ul>
-                    <div className="border-solid border-l border-gray-700 ml-2">
+                    <div className="border-solid border-l border-gray-700 ml-1">
                     {
                     strings.content.positions.map(
                         (position, index) =>
