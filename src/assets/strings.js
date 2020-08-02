@@ -19,13 +19,13 @@ const strings = {
 			"alt": "my photo"
 		},
 		"title": "Full-Stack Developer",
-		"personal": "33 years old, Turkish, currently living in Toulouse, France, relocation possible to anywhere in the World",
+		"personal": "33 years old, Turkish, located in Toulouse, France, relocation possible to anywhere in the World",
 		"missionTitle": "Mission",
 		"mission": "Passionate about <strong>application design and development</strong> in all of its layers, I am looking for new career opportunities with a <em>larger space to evolve and make a change for the better</em>. I thrive with <em>learning and problem-solving challenges</em> in everyday life and aim to always be better than yesterday.",
 		"workexperience": "Professional Experience",
 		"education": "Education",
-		"softskills": "Leading Soft Skills",
-		"hardskills": "Leading Hard Skills",
+		"softskills": "Main Soft Skills",
+		"hardskills": "Main Hard Skills",
 		"hobbies": "Hobbies",
 		"timelineperiodstartindicator": " from ",
 		"timelineperiodendindicator": " to ",
@@ -34,7 +34,7 @@ const strings = {
 			{
 				"logo": require("../assets/phone.png"),
 				"alt": "my telepĥone",
-				"noUserInputText": "<a href='tel:+33603240059'>(0033) 6 03 24 00 59</a>"
+				"noUserInputText": "<a href='tel:+33603240059'>(0033) 603240059</a>"
 			},
 			{
 				"logo": require("../assets/mail.png"),
@@ -44,7 +44,7 @@ const strings = {
 			{
 				"logo": require("../assets/website.png"),
 				"alt": "my website",
-				"noUserInputText": "<a target='_blank' href='https://www.emir.rocks'>www.emir.rocks</a>"
+				"noUserInputText": "<a target='_blank' href='https://www.emirdev.com'>emirdev.com</a>"
 			},
 			{
 				"logo": require("../assets/in.png"),
@@ -82,7 +82,7 @@ const strings = {
 						"noUserInputText": "Proposed, designed, developed and deployed several modules on an existing internal Web platform for database transfer and configuration in <span class='italic'>Twig, CSS, Vue.js, Php,</span> and <span class='italic'>Mysql</span> with <span class='italic'>TDD</span>"
 					},
 					{
-            "noUserInputText": "Proposed and developed a proof-of-concept mobile app for public reservation platform in <span class='italic'>Flutter-Dart</span> (I learned it for this project), <span class='italic'>MongoDB</span> and <span class='italic'>Node.js</span> for <span class='italic'>Android</span> and <span class='italic'>IOS</span>",
+            "noUserInputText": "Proposed, self-taught and developed a proof-of-concept mobile app for public reservation platform in <span class='italic'>Flutter-Dart</span>, <span class='italic'>MongoDB</span> and <span class='italic'>Node.js</span> for <span class='italic'>Android</span> and <span class='italic'>IOS</span>",
 					}
 				]
 			},
@@ -95,7 +95,7 @@ const strings = {
 						"noUserInputText": "Started the Turkish version of the official <span class='italic'>Vue.js Documentation Website</span> (on my Github)"
 					},
 					{
-						"noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span> (still hosted at traductionturcfrancais.com)"
+						"noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span> (hosted at traductionturcfrancais.com)"
 					},
 					{
 						"noUserInputText": "Self-taught, designed, built and deployed two basic <span class='italic'>Android</span> apps, one for teaching phonetics and another one for teaching grammar."
@@ -156,7 +156,7 @@ const strings = {
 		],
 		"hardskillslist": [
 			{
-				"noUserInputText": "TDD (Jest, QUnit, PhpUnit)",
+				"noUserInputText": "TDD (Front and Back)",
 				"level": 80
 			},
 			{
@@ -180,7 +180,7 @@ const strings = {
 				"level": 90
 			},
 			{
-				"noUserInputText": "Web MarkUp & Styling",
+				"noUserInputText": "Web MarkUp/Styling",
 				"level": 80
 			},
 			{
@@ -196,7 +196,7 @@ const strings = {
 				"level": 90
 			},
 			{
-				"noUserInputText": "IntelliJ & Android Studio",
+				"noUserInputText": "IntelliJ/Android Studio",
 				"level": 50
 			},
 			{
@@ -204,11 +204,7 @@ const strings = {
 				"level": 60
 			},
 			{
-				"noUserInputText": "Gitlab",
-				"level": 60
-			},
-			{
-				"noUserInputText": "Github",
+				"noUserInputText": "Gitlab/Github",
 				"level": 60
 			}
 		],

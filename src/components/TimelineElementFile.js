@@ -6,7 +6,7 @@ class TimelineElementFile extends React.Component {
 
     generateSubdetail = (subdetail, index) => {
         return (
-        <li className="list-disc ml-8 z-50" key={index}>
+        <li className="list-disc ml-4 z-50" key={index}>
             <div dangerouslySetInnerHTML={{__html: subdetail.noUserInputText}}></div>
         </li>
         );
@@ -42,11 +42,11 @@ class TimelineElementFile extends React.Component {
 
 	render() {
 		return (
-        <li className="bullet bullet-file list-outside mx-4 pb-2 border-b border-gray-100">
+        <li className="bullet bullet-file list-outside mx-4 pb-0 border-b border-gray-100">
             <div className="">
                 {this.generatePeriod(this.props.element)}
             </div>
-            <div className="font-bold text-2xl">{this.props.element.title}</div>
+            <div className="font-bold">{this.props.element.title}</div>
             <ul>
                 {
                 this.props.element.subdetails.map(

@@ -1,15 +1,16 @@
 import React from 'react';
 import TimelineElementFile from './TimelineElementFile';
+import SectionTitleFile from './SectionTitleFile';
 import strings from '../assets/strings';
 
 class EducationFile extends React.Component {
 	render() {
 		return (
         <div>
-            <h2 className="underline text-4xl">{(strings.content.education).toUpperCase()}</h2>
+			<SectionTitleFile title={strings.content.education} />
             <div className="flex">
                 <ul>
-                    <div className="border-solid border-l border-gray-700 ml-2">
+                    <div className="border-solid border-l border-gray-700 ml-1">
                     {
                     strings.content.degrees.map(
                         (degree, index) => 
