@@ -15,13 +15,13 @@ class Contact extends React.Component {
 					return (
 						<div 
 							key={index} 
-							className="pr-3 pt-3 pb-3">
+							className="pr-3 pt-3 pb-3 flex">
 							<img 
-								className="inline-block w-8 m-auto p-1" 
+								className="inline-block w-1/12 m-auto p-1" 
 								src={contactmethod.logo} alt={contactmethod.alt} 
 								/>
 							<div 
-								className="inline-block pl-4" 
+								className="inline-block pl-4 w-11/12" 
 								dangerouslySetInnerHTML={{__html: contactmethod.noUserInputText}}
 								/>
 						</div>

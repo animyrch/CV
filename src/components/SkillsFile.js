@@ -15,9 +15,9 @@ class Skills extends React.Component {
         return list.map(
             (listitem, index) => {
                 return (
-                    <div className="pt-6 md:table-row leading-none" key={index}>
-                      <li className="md:table-cell md:px-4 list-disc ml-4 md:text-right" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
-                      <p className="styled md:w-1/2 md:table-cell md:align-middle md:text-left">
+                    <div className="pt-6 table-row leading-none" key={index}>
+                      <li className="table-cell px-4 list-disc ml-4 text-right" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
+                      <p className="styled table-cell align-middle text-left">
                             {this.skillMeter(listitem.level)}
                         </p>
                     </div>
@@ -54,7 +54,7 @@ class Skills extends React.Component {
 				</div>
 				<div className="w-6/12 flex flex-col">
 					<SectionTitleFile title={strings.content.hardskills} />
-					<ul className="md:table ">
+					<ul className="table ">
 						{this.complexeSkillItems(strings.content.hardskillslist)}
 					</ul>
 				</div>
