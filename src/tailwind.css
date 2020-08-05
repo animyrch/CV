@@ -244,3 +244,11 @@ meter {
 	}
 }
 
+
+/* utilities */
+
+.hide {
+	position: absolute;
+	top: -9999px !important;
+	left: -999px !important;
+}

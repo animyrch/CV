@@ -66,7 +66,7 @@ class App extends React.Component {
 	render() {
 		return (
 		<div>
-			<div className="App mobile-view p-3 text-lg text-gray-800">
+			<div className="App mobile-view p-3 xl:p-0 text-lg text-gray-800">
 				{this.displayContactModal()}
 				<CvMenu 
 					updatePage={this.updatePage} 
