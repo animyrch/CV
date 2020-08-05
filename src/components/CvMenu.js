@@ -19,10 +19,10 @@ class CvMenu extends React.Component {
 	}
 
 	navMenu = () => {
+		if (this.state.hamburgerFlipped) {
 			return (
-				<div className={(this.state.hamburgerFlipped ? "flex " : "sm:hidden xl:flex ")  + "flex-col h-screen"}>
-					<nav className="absolute text-center text-white w-full z-30 mt-10 xl:mt-0 -ml-3 xl:flex xl:flex-row xl:h-16 xl:self-end xl:w-8/12">
-						<div className="hidden xl:block bg-white transform rotate-45 w-24 h-24 -mr-12 -mt-12"></div>
+				<div className="flex flex-col h-screen">
+					<nav className="absolute text-center text-white w-full z-30 mt-10 -ml-3">
 						{this.navMenuItem(this.clickedOnPage, 1, strings.navigation.me)}
 						{this.navMenuItem(this.clickedOnPage, 2, strings.navigation.work)}
 						{this.navMenuItem(this.clickedOnPage, 3, strings.navigation.education)}
@@ -36,19 +36,17 @@ class CvMenu extends React.Component {
 				</div>
 			);
 		}
+	}
 
 	navMenuItem = (onClickMethod, bindValue, itemText) => {
-		if (itemText !== 'Get In Touch') {
-			return (
-			<div 
-				className="bg-teal-500 text-xl font-medium pb-2 xl:flex-grow xl:pl-10 xl:pt-2" 
-				onClick={onClickMethod.bind(this, bindValue)}
-				>
-				<span>{itemText}</span>
-				<div className="hidden xl:block bg-white transform rotate-45 w-12 h-12 m-auto mt-3"></div>
-			</div>
-			);
-		}	
+		return (
+		<div 
+			className="bg-teal-500 text-2xl font-medium pb-2" 
+			onClick={onClickMethod.bind(this, bindValue)}
+			>
+			{itemText}
+		</div>
+		);
 	}
 
 	clickedOnPage = (page) => {
@@ -59,7 +57,7 @@ class CvMenu extends React.Component {
 	menuButton = () => {
 		return (
 		<div 
-			className="w-12 xl:hidden" 
+			className="w-12" 
 			onClick={this.flipHamburger}
 			>
 			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
@@ -69,15 +67,12 @@ class CvMenu extends React.Component {
 
 	contactButton = () => {
 		return (
-			<div>
 		<div 
 			onClick={this.props.toggleContactModal.bind(this)}
       className="flex items-center flex-no-shrink mr-6 w-16 mt-1"
 			>
 			<img className="-mt-2" src={strings.navigation.contact.image} alt="My contact information" />
 		</div>
-
-			</div>  
 		);
 	}
 	
