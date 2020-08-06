@@ -38,9 +38,9 @@ class Skills extends React.Component {
         return list.map(
             (listitem, index) => {
                 return (
-                    <div key={index} className="">
+                  <div key={index} className="">
                         <div className="text-center">{listitem.name}</div>
-              			    <img className="w-2/3 md:w-2/5 m-auto" src={listitem.image} alt={listitem.name} />
+                    <img className="w-2/3 md:w-2/5 xl:w-4/12 m-auto" src={listitem.image} alt={listitem.name} />
                     </div>
                 );
             }
@@ -49,9 +49,9 @@ class Skills extends React.Component {
 
 	render() {
 		return (
-			<div>
+      <div class="xl:px-8 xl:pt-32 xl:mx-24">
                 <h2 className="page-title underline text-3xl text-center">{strings.content.softskills}</h2>
-                <ul>
+                <ul className="leading-loose">
                     {this.simpleSkillItems(strings.content.softskillslist)}
                 </ul>
                 <h2 className="page-title underline text-3xl text-center">{strings.content.hardskills}</h2>

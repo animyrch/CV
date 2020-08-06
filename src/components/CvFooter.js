@@ -8,32 +8,32 @@ class CvFooter extends React.Component {
 		if (this.props.page > 1) {
 			return (
 			<button 
-				onClick={this.props.goToPreviousPage.bind()} 
-				className="nav-button arrow-left flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none" 
+				onClick={this.props.goToPreviousPage.bind(this)} 
+        className="nav-button arrow-left flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none xl:hidden" 
 				/>
 			);
 		} else {
 			return (
-			<div className="w-1/3" />
+        <div className="w-1/3 xl:hidden" />
 			);
 		}
 	}
 
-	buildContinueNavigation = () => {
+	buildContinueNavigation = () => { 
 		if (this.props.page < 4) {
 			return (
-			<button 
-				onClick={this.props.goToNextPage.bind()} 
-        className="nav-button arrow-right flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none"
-				/>
-			);
+        <button 
+          onClick={this.props.goToNextPage.bind(this)} 
+          className="nav-button arrow-right flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none text-white xl:hidden">
+        </button>
+			)
 		}
 	}
 
 	contactButton = () => {
 		if (this.props.page === 4) {
 			return (
-      <div className="-ml-5 -mt-5">
+        <div className="-ml-5 -mt-5 xl:hidden">
 			  <input 
 				  className="arrow-right h-16 block" 
 				  type="image" 
@@ -51,8 +51,10 @@ class CvFooter extends React.Component {
 		return (
 			<div>
 				<footer id="cv-footer" className="flex content-center mt-12 text-center">
+
+          <div className="w-1/3 hidden xl:block" />
 					{this.goBackInNavigation()}
-					<div className="page-number w-1/3">{this.props.page}/4</div>
+          <div className="page-number w-1/3 xl:hidden">{this.props.page}/4</div>
 					{this.buildContinueNavigation()}
           {this.contactButton()}
 				</footer>

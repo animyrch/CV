@@ -9,15 +9,19 @@ class AboutMe extends React.Component {
 
 	render() {
 		return (
-			<div className="">
-				<img 
-					src={strings.content.myphoto.image} 
-					alt={strings.content.myphoto.alt} 
-					className="w-1/4 md:w-2/12 m-auto rounded-full" 
-					/>
-				<div className="my-name text-3xl text-center">{strings.content.name}</div>
-				<div className="my-title text-2xl text-center">{strings.content.title}</div>
-				<div className="personal-summary text-center pb-4">{strings.content.personal}</div>
+      <div className="px-8 xl:flex xl:flex-col xl:pt-32 xl:mx-24">
+        <div className="xl:flex xl:flex-row">  
+          <img 
+            src={strings.content.myphoto.image} 
+            alt={strings.content.myphoto.alt} 
+            className="w-1/4 md:w-2/12 m-auto rounded-full xl:w-40 xl:ml-0 xl:flex-grow-0 xl:m-10 xl:h-56" 
+            />
+          <div className="flex flex-col text-center xl:text-left xl:leading-loose xl:self-center"> 
+            <div className="my-name text-3xl">{strings.content.name}</div>
+            <div className="my-title text-2xl">{strings.content.title}</div>
+            <div className="personal-summary pb-4">{strings.content.personal}</div>
+          </div>
+        </div>
 				<div className="quote">“</div>
 				<div className="mission-statement text-xl text-indent" dangerouslySetInnerHTML={{__html: strings.content.mission}} />
 				<div className="quote text-right">”</div>

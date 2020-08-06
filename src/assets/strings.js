@@ -2,6 +2,7 @@ const strings = {
 	"navigation": {
 		"next": "Next",
 		"previous": "Previous",
+    "see": "See My",
 		"me": "About Me",
 		"work": "Professional Experience",
 		"education": "Education",

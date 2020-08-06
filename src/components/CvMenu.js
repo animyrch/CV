@@ -81,8 +81,8 @@ class CvMenu extends React.Component {
 	}
 
 	contactButton = () => {
-		return (
-			<div>
+		return (    
+      <div className="">
         <div
           onClick={this.props.toggleContactModal.bind(this)}
           className="flex items-center flex-no-shrink mr-6 w-16 mt-1 xl:hidden"

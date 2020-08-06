@@ -10,7 +10,7 @@ class WorkExperience extends React.Component {
     
 	render() {
 		return (
-        <div>
+      <div className="xl:px-8 xl:pt-32 xl:mx-24">
             <h2 className="page-title underline text-3xl text-center">{strings.content.workexperience}</h2>
             <div className="flex">
                 <ul>
