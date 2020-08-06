@@ -81,7 +81,7 @@ class App extends React.Component {
 					/>
 			</div>
 		
-			<div className="App file-view p-3 pb-0 text-gray-800 text-sm leading-tight">
+			<div className="App file-view p-3 pb-0 pl-1 text-gray-800 text-sm leading-tight">
 				<AboutMeFile />
 				<ContactFile />
 				<FileSeparator />

@@ -1,6 +1,7 @@
 import React from 'react';
 import strings from '../assets/strings';
 import PropTypes from 'prop-types';
+import GetInTouchIndicator from './GetInTouchIndicator';
 
 class Contact extends React.Component {
 	
@@ -38,9 +39,7 @@ class Contact extends React.Component {
 			className="overlay fixed bottom-0 left-0 right-0 top-0 w-full m-h-screen z-40 bg-black bg-opacity-25 overflow-scroll " 
 			onClick={this.props.toggleContactModal.bind(this)} 
 			>
-			<div className="hidden xl:block fixed z-50 w-40 h-40 transform rotate-45 bg-teal-500 ml-8 mt-92">
-				<span className="transform ml-12 mt-20 text-white text-lg inline-block -rotate-45">Get In Touch</span>
-			</div>
+      <GetInTouchIndicator mt="mt-92"/>
 			<div 
 				className="popup absolute h-auto mx-auto left-0 right-0 p-2 mt-20 bg-white border border-solid border-gray-800 w-11/12 shadow-lg z-50 xl:m-0 xl:w-4/12"
 				>

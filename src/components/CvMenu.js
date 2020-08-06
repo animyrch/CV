@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../assets/strings';
+import GetInTouchIndicator from './GetInTouchIndicator';
 
 class CvMenu extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {hamburgerFlipped: false};
+		this.state = {
+      hamburgerFlipped: false,
+      page: 1
+    };
 	}
 
 	flipHamburger = () => {
@@ -37,21 +41,30 @@ class CvMenu extends React.Component {
 			);
 		}
 
+  pageIndicator = (page) => {
+    if (this.state.page === page) {
+      return (
+      <div className="hidden xl:block bg-white transform rotate-45 w-12 h-12 m-auto mt-3 rounded"></div>
+      );
+    }
+  }
+
 	navMenuItem = (onClickMethod, bindValue, itemText) => {
-		if (itemText !== 'Get In Touch') {
 			return (
 			<div 
-				className="bg-teal-500 text-xl font-medium pb-2 xl:flex-grow xl:pl-10 xl:pt-2" 
+        className={"bg-teal-500 text-xl font-medium pb-2 xl:flex-grow xl:pl-10 xl:pt-2 " + (itemText === strings.navigation.contact.text ? "xl:hidden" : "")} 
 				onClick={onClickMethod.bind(this, bindValue)}
 				>
 				<span>{itemText}</span>
-				<div className="hidden xl:block bg-white transform rotate-45 w-12 h-12 m-auto mt-3"></div>
+        {this.pageIndicator(bindValue)}
 			</div>
 			);
-		}	
 	}
 
 	clickedOnPage = (page) => {
+    if (page !== this.state.page) {
+      this.setState({page});
+    }
 		this.props.updatePage(page);
 		this.flipHamburger();
 	}
@@ -70,13 +83,18 @@ class CvMenu extends React.Component {
 	contactButton = () => {
 		return (
 			<div>
-		<div 
-			onClick={this.props.toggleContactModal.bind(this)}
-      className="flex items-center flex-no-shrink mr-6 w-16 mt-1"
-			>
-			<img className="-mt-2" src={strings.navigation.contact.image} alt="My contact information" />
-		</div>
-
+        <div
+          onClick={this.props.toggleContactModal.bind(this)}
+          className="flex items-center flex-no-shrink mr-6 w-16 mt-1 xl:hidden"
+          >
+          <img className="-mt-2" src={strings.navigation.contact.image} alt="My contact information" />
+        </div>
+        <div
+          onClick={this.props.toggleContactModal.bind(this)}
+          className="hidden xl:block">
+          <GetInTouchIndicator 
+            mt="-mt-24"/>        
+        </div>
 			</div>  
 		);
 	}

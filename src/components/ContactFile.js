@@ -12,9 +12,9 @@ class ContactFile extends React.Component {
 					return (
 						<div 
 							key={index} 
-							className="flex flex-row">
+							className="flex">
 							<img 
-								className="h-4 mr-1 ml-1" 
+								className="h-4 ml-1 mr-1" 
 								src={contactmethod.logo} alt={contactmethod.alt} 
 								/>
 							<div 
