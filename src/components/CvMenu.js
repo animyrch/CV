@@ -23,10 +23,10 @@ class CvMenu extends React.Component {
 	}
 
 	navMenu = () => {
+		if (this.state.hamburgerFlipped) {
 			return (
-				<div className={(this.state.hamburgerFlipped ? "flex " : "sm:hidden xl:flex ")  + "flex-col h-screen"}>
-					<nav className="absolute text-center text-white w-full z-30 mt-10 xl:mt-0 -ml-3 xl:flex xl:flex-row xl:h-16 xl:self-end xl:w-8/12">
-						<div className="hidden xl:block bg-white transform rotate-45 w-24 h-24 -mr-12 -mt-12"></div>
+				<div className="flex flex-col h-screen">
+					<nav className="absolute text-center text-white w-full z-30 mt-10 -ml-3">
 						{this.navMenuItem(this.clickedOnPage, 1, strings.navigation.me)}
 						{this.navMenuItem(this.clickedOnPage, 2, strings.navigation.work)}
 						{this.navMenuItem(this.clickedOnPage, 3, strings.navigation.education)}
@@ -40,6 +40,7 @@ class CvMenu extends React.Component {
 				</div>
 			);
 		}
+	}
 
   pageIndicator = (page) => {
     if (this.state.page === page) {
@@ -72,7 +73,7 @@ class CvMenu extends React.Component {
 	menuButton = () => {
 		return (
 		<div 
-			className="w-12 xl:hidden" 
+			className="w-12" 
 			onClick={this.flipHamburger}
 			>
 			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
