@@ -34,32 +34,32 @@ const strings = {
 			{
 				"logo": require("../assets/phone.png"),
 				"alt": "my telepĥone",
-        "noUserInputText": "<a class='inline-block w-full' href='tel:+33603240059'>(0033) 603240059</a>"
+        "noUserInputText": "<a class='inline-block w-full md:pt-4' href='tel:+33603240059'>(0033) 603240059</a>"
 			},
 			{
 				"logo": require("../assets/mail.png"),
 				"alt": "my e-mail",
-				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='mailto:emirgokhanozcelik@gmail.com'>emirgokhanozcelik@gmail.com</a>"
+				"noUserInputText": "<a class='inline-block w-full md:pt-4' target='_blank' href='mailto:emirgokhanozcelik@gmail.com'>emirgokhanozcelik@gmail.com</a>"
 			},
 			{
 				"logo": require("../assets/website.png"),
 				"alt": "my website",
-				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://www.emirdev.com'>emirdev.com</a>"
+				"noUserInputText": "<a class='inline-block w-full md:pt-4' target='_blank' href='https://www.emirdev.com'>emirdev.com</a>"
 			},
 			{
 				"logo": require("../assets/in.png"),
 				"alt": "my linkedin profile",
-				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://linkedin.com/in/emirozcelik'>/emirozcelik</a>"
+				"noUserInputText": "<a class='inline-block w-full md:pt-4' target='_blank' href='https://linkedin.com/in/emirozcelik'>/emirozcelik</a>"
 			},
 			{
 				"logo": require("../assets/github.png"),
 				"alt": "my github",
-				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://github.com/animyrch'>/animyrch</a>"
+				"noUserInputText": "<a class='inline-block w-full md:pt-4' target='_blank' href='https://github.com/animyrch'>/animyrch</a>"
 			},
 			{
 				"logo": require("../assets/download.png"),
 				"alt": "Download this as CV",
-				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='/EmirOZCELIK-CV.pdf' download>Download this as CV</a>"
+				"noUserInputText": "<a class='inline-block w-full md:pt-4' target='_blank' href='/EmirOZCELIK-CV.pdf' download>Download this as CV</a>"
 			},
 		],
 		"positions": [

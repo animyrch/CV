@@ -35,7 +35,7 @@ ul .bullet:before{
 
 ul .bullet-file:before{
 	left: -22px;
-	top: 0px;
+	top: 1px;
 	width: 10px;
 	height: 10px;
 }
