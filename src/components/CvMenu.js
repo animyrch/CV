@@ -24,7 +24,7 @@ class CvMenu extends React.Component {
 
 	navMenu = () => {
 			return (
-				<div className={(this.state.hamburgerFlipped ? "flex " : "sm:hidden xl:flex ")  + "flex-col h-screen"}>
+				<div className={(this.state.hamburgerFlipped ? "flex " : "hidden xl:flex ")  + "flex-col h-screen"}>
 					<nav className="absolute text-center text-white w-full z-30 mt-10 xl:mt-0 -ml-3 xl:flex xl:flex-row xl:h-16 xl:self-end xl:w-8/12">
 						<div className="hidden xl:block bg-white transform rotate-45 w-24 h-24 -mr-12 -mt-12"></div>
 						{this.navMenuItem(this.clickedOnPage, 1, strings.navigation.me)}
