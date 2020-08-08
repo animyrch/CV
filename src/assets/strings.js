@@ -16,7 +16,7 @@ const strings = {
 	"content": {
 		"name": "Emir Gökhan ÖZÇELİK",
 		"myphoto": {
-			"image": require('../assets/myPhoto.jpg'),
+			"image": require('../assets/MyPhoto.png'),
 			"alt": "my photo"
 		},
 		"title": "Full-Stack Developer",
