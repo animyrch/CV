@@ -22,6 +22,17 @@ class CvMenu extends React.Component {
 		});
 	}
 
+  displayClickOutsideDiv = () => {
+    if (this.hamburgerOpen) {
+      return (
+        <div 
+          onClick={this.flipHamburger.bind(this)} 
+          className="bg-transparent z-20 flex-1 overflow-auto"
+          />
+     )
+    }
+  }
+
 	navMenu = () => {
 			return (
 				<div className={(this.state.hamburgerFlipped ? "flex " : "hidden xl:flex ")  + "flex-col h-screen"}>
@@ -33,11 +44,8 @@ class CvMenu extends React.Component {
 						{this.navMenuItem(this.clickedOnPage, 4, strings.navigation.skills)}
 						{this.navMenuItem(this.props.toggleContactModal, null, strings.navigation.contact.text)}
 					</nav>
-					<div 
-						onClick={this.flipHamburger.bind(this)} 
-						className="bg-transparent z-20 flex-1 overflow-auto"
-						/>
-				</div>
+          {this.displayClickOutsideDiv() }
+        </div>
 			);
 		}
 
