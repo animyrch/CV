@@ -23,7 +23,7 @@ class CvMenu extends React.Component {
 	}
 
   displayClickOutsideDiv = () => {
-    if (this.hamburgerOpen) {
+    if (this.state.hamburgerFlipped) {
       return (
         <div 
           onClick={this.flipHamburger.bind(this)} 
