@@ -101,6 +101,9 @@ const strings = {
           {
             "noUserInputText": "Developed and deployed this responsive CV App with <span class='italic'>React</span>, <span class='italic'>TailwindCSS</span> and <span class='italic'>Heroku CLI</span> (<a target='_blank' href='https://github.com/animyrch/CV' class='underline'>see on Github</a>)"
           },
+          {
+            "noUserInputText": "Participated in hackathons <a class='underline' href='https://www.nuitdelinfo.com/' target='_blank'>Nuit de l'Info</a> and <a target='_blank' class='underline' href='https://2019.devfesttoulouse.fr/'>in developer conferences</a>"
+          },
 					{
             "noUserInputText": "Started the Turkish version of the official <span class='italic underline'><a target='_blank' href='https://animyrch.github.io/tr.vuejs.org/'>Vue.js Documentation Website</a></span>"
 					},
