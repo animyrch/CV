@@ -87,28 +87,61 @@ const strings = {
 					}
 				]
 			},
+      {
+        "start": "2018-01",
+        "end": "2018-05",
+        "title": "Customer Service Executive at Booking.com, Lille/France",
+				"subdetails": []
+      },
 			{
 				"start": "2016",
 				"end": "present",
 				"title": "Personal Projects",
 				"subdetails": [
+          {
+            "noUserInputText": "Developed and deployed this responsive CV App with <span class='italic'>React</span>, <span class='italic'>TailwindCSS</span> and <span class='italic'>Heroku CLI</span> (<a target='_blank' href='https://github.com/animyrch/CV' class='underline'>see on Github</a>)"
+          },
 					{
-						"noUserInputText": "Started the Turkish version of the official <span class='italic'>Vue.js Documentation Website</span> (on my Github)"
+            "noUserInputText": "Started the Turkish version of the official <span class='italic underline'><a target='_blank' href='https://animyrch.github.io/tr.vuejs.org/'>Vue.js Documentation Website</a></span>"
 					},
 					{
-						"noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span> (hosted at traductionturcfrancais.com)"
+            "noUserInputText": "Self-taught, designed, built and deployed a basic interactive Web app with several game modules for teaching vocabulary in <span class='italic'>Html, CSS, JQuery, Php</span> and <span class='italic'>Mysql</span> (hosted at <a target='_blank' href='http://traductionturcfrancais.com' class='underline'>traductionturcfrancais.com</a>)"
 					},
 					{
 						"noUserInputText": "Self-taught, designed, built and deployed two basic <span class='italic'>Android</span> apps, one for teaching phonetics and another one for teaching grammar."
 					}
 				]
 			},
+      {
+        "start": "2013-05",
+        "end": "2013-08",
+        "title": "Translator and Assistant Market Manager (Intership) at Ceetiz.com, Paris/France",
+				"subdetails": []
+      },
+      {
+        "start": "2012-10",
+        "end": "2013-05",
+        "title": "Teacher in Turkish Conversation Course at Strasbourg University, Strasbourg/France",
+        "subdetails": []
+      },
+      {
+        "start": "2009-05",
+        "end": "2011-09",
+        "title": "Assistant Project Manager in Translation at Bordo Tercume, Ankara/Turkey",
+				"subdetails": []
+      },
 			{
 				"start": "2006",
 				"end": "2018",
-				"title": "Freelance Translator & Interpreter in Turkish, French and English",
+				"title": "Translator & Interpreter in Turkish, French and English",
 				"subdetails": []
-			}
+			},
+      {
+        "start": "2005-11",
+        "end": "2007-03",
+        "title": "Supervisor at Burger King, Ankara/Turkey",
+        "subdetails": []
+      }
 		],
 		"degrees": [
 			{
@@ -137,9 +170,15 @@ const strings = {
 			{
 				"start": "2004",
 				"end": "2009",
-				"title": "Bachelor's Degree in French Literature - Hacettepe University, Turkey & Toulouse University - Mirail II, France",
+				"title": "Bachelor's Degree in French Literature - Hacettepe University, Ankara/Turkey & Toulouse University - Mirail II, Toulouse/France",
 				"subdetails": []
-			}
+			},
+      {
+        "start": "2000",
+        "end": "2004",
+        "title": "High School Degree in Applied Foreign Languages (English, French) - Haydarpaşa Anatolian High School, Istanbul/Turkey",
+        "subdetails": []
+      }
 		],
 		"softskillslist": [
 			{
