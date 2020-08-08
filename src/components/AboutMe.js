@@ -14,7 +14,7 @@ class AboutMe extends React.Component {
           <img 
             src={strings.content.myphoto.image} 
             alt={strings.content.myphoto.alt} 
-            className="w-1/4 md:w-2/12 m-auto rounded-full xl:w-40 xl:ml-0 xl:flex-grow-0 xl:m-10 xl:h-56" 
+            className="mt-3 w-2/4 md:w-3/12 m-auto rounded-full xl:w-3/12 xl:ml-0 xl:flex-grow-0 xl:m-10" 
             />
           <div className="flex flex-col text-center xl:text-left xl:leading-loose xl:self-center"> 
             <div className="my-name text-3xl">{strings.content.name}</div>
