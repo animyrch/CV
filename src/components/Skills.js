@@ -19,11 +19,11 @@ class Skills extends React.Component {
         return list.map(
             (listitem, index) => {
                 return (
-                    <div className="pt-6 md:table-row" key={index}>
-                      <li className="md:table-cell md:px-4 list-disc ml-4 md:text-right" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
-                      <p className="styled md:w-1/2 md:table-cell md:align-middle md:text-left">
-                            {this.skillMeter(listitem.level)}
-                        </p>
+                    <div className="pt-6 table-row" key={index}>
+                      <li className="table-cell px-4 list-disc ml-4 text-right" dangerouslySetInnerHTML={{__html: listitem.noUserInputText}}></li>
+                      <div className="pb-1 border-t-2 shadow-md w-1/2 table-cell align-middle text-left">
+                        {this.skillMeter(listitem.level)}
+                      </div>
                     </div>
                 );
             }
@@ -31,7 +31,19 @@ class Skills extends React.Component {
     }
 
     skillMeter = (level) => {
-        return <meter className="md:w-2/5" min="0" max="100" low="35" high="70" optimum="100" value={level}></meter>;
+      let bgcolor = "bg-green-400";
+      if (level < 50) {
+        bgcolor = "bg-red-400";
+      } else if (level < 70) {
+        bgcolor = "bg-yellow-400";
+      }
+      return (
+        <div>
+          <div style={{width: "100%"}} >
+            <p style={{width: `${level}%`}} className={`text-transparent block ${bgcolor}`}>|</p>
+          </div>
+        </div>
+      );
     }
 
     hobbyItems = (list) => {
@@ -49,7 +61,7 @@ class Skills extends React.Component {
 
 	render() {
 		return (
-      <div class="xl:px-8 xl:pt-32 xl:mx-24">
+      <div className="xl:px-8 xl:pt-32 xl:mx-24">
                 <h2 className="page-title underline text-3xl text-center">{strings.content.softskills}</h2>
                 <ul className="leading-loose">
                     {this.simpleSkillItems(strings.content.softskillslist)}

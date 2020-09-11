@@ -22,7 +22,13 @@ const strings = {
 		"title": "Full-Stack Developer",
 		"personal": "33 years old, Turkish, located in Toulouse, France, relocation possible to anywhere in the World",
 		"missionTitle": "Mission",
-		"mission": "Passionate about <strong>application design and development</strong> in all of its layers, I am looking for new career opportunities with a <em>larger space to evolve and make a change for the better</em>. I thrive with <em>learning and problem-solving challenges</em> in everyday life and aim to always be better than yesterday.",
+    "aboutMePointMarker": require('../assets/check.png'),
+		"aboutMePoints": [
+      "33-year-old full stack-oriented developer passionate about his work with <strong>4 years of experience in developing applications</strong> after 12 years of experience in English, French and Turkish translation industry",
+      "Fueled by job ownership and company citizenship, <strong>takes initiative to bring new ideas to the table</strong> with collective success in mind",
+      "Thrives with <strong>learning and problem-solving challenges</strong> and follows state-of-the-art techniques and technologies to build systems to be proud of",
+      "Looking for new career opportunities with a larger space to evolve and <strong>make a change for the better</strong> anywhere in the world"
+    ],
 		"workexperience": "Professional Experience",
 		"education": "Education",
 		"softskills": "Main Soft Skills",
@@ -69,9 +75,12 @@ const strings = {
 				"end": "present",
 				"title": "Full-Stack Application Developer, Junior at Lodecom, Saint-Sulpice/France",
 				"subdetails": [
-					{
-						"noUserInputText": "Charged with complete rethinking of the public reservation Web platform in <span class='italic'>Less, Vue.js, Node.js</span> and <span class='italic'>Sequelize</span> with <span class='italic'>TDD</span>"
-					}
+          {
+            "noUserInputText": "Leading company efforts in completely rethinking their public reservation Web application as a fully responsive SaaS SPA"
+          },
+          {
+            "noUserInputText": "Skills used in this position: Vue.js, Less, ElementUI, AdobeXD, Draw.io (for design diagrams), Node.js, Typescript, Sequilize, BDD, TDD, git and Gitlab CD/CI"
+          },
 				]
 			},
 			{
@@ -80,11 +89,17 @@ const strings = {
 				"title": "Full-Stack Application Developer (Internship) at Lodecom, Saint-Sulpice/France",
 				"subdetails": [
 					{
-						"noUserInputText": "Proposed, designed, developed and deployed several modules on an existing internal Web platform for database transfer and configuration in <span class='italic'>Twig, CSS, Vue.js, Php,</span> and <span class='italic'>Mysql</span> with <span class='italic'>TDD</span>"
+            "noUserInputText": "Came up with and accomplished internal automation Web applications, <strong>doubling production team efficiency </strong>over the course of a 6-month period"
 					},
 					{
-            "noUserInputText": "Proposed, self-taught and developed a proof-of-concept mobile app for public reservation platform in <span class='italic'>Flutter-Dart</span>, <span class='italic'>MongoDB</span> and <span class='italic'>Node.js</span> for <span class='italic'>Android</span> and <span class='italic'>IOS</span>",
-					}
+            "noUserInputText": "Skills used in this position: HTML, Smarty, CSS, Vue.js, jQuery, Php, MySQL with PDO and TDD"
+					},
+          {
+            "noUserInputText": "Generated new ideas for the new public reservation mobile application by learning Flutter in 2 weeks and building proof-of- concept Android and IOS applications in another 2 weeks"
+          },
+          {
+            "noUserInputText": "Collaborated with other developers to quickly debug and fix production issues in various applications of the company"
+          }
 				]
 			},
       {
@@ -153,7 +168,7 @@ const strings = {
 				"title": "Bachelor's Degree in Software Application Development - AP Formation, Toulouse/France",
 				"subdetails": [
 					{
-            "noUserInputText": "Lectures and small projects in <span class='italic'>Javascript, Typescript, Angular 2, Agile Development and Application Design, MySQL, Php, CodeIgniter, Java SE, Java EE, Spring, Hibernate, Android</span> and <span class='italic'>Node.js</span>"
+            "noUserInputText": "Lectures and projects in <span class='italic'>Javascript, Typescript, Angular 2, Agile Development and Application Design, MySQL, Php, CodeIgniter, Java SE, Java EE, Spring, Hibernate, Android</span> and <span class='italic'>Node.js</span>"
 					},
 					{
 						"noUserInputText": "Term Project: Design choices and best practices for an internal database transfer application."
@@ -247,7 +262,7 @@ const strings = {
 				"level": 60
 			},
 			{
-				"noUserInputText": "Gitlab/Github",
+				"noUserInputText": "Git/Gitlab/Github",
 				"level": 60
 			}
 		],
