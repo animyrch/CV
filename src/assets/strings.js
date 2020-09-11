@@ -79,7 +79,7 @@ const strings = {
             "noUserInputText": "Leading company efforts in completely rethinking their public reservation Web application as a fully responsive SaaS SPA"
           },
           {
-            "noUserInputText": "Skills used in this position: Vue.js, Less, ElementUI, AdobeXD, Draw.io (for design diagrams), Node.js, Typescript, Sequilize, BDD, TDD, git and Gitlab CD/CI"
+            "noUserInputText": "Skills used in this position: Vue.js, Less, ElementUI, AdobeXD, Draw.io (for design diagrams), Node.js, Typescript, Sequilize, BDD, TDD (Vue-test-utils on the frontend and Mocha, Chai on the backend), git and Gitlab CD/CI"
           },
 				]
 			},
@@ -92,7 +92,7 @@ const strings = {
             "noUserInputText": "Came up with and accomplished internal automation Web applications, <strong>doubling production team efficiency </strong>over the course of a 6-month period"
 					},
 					{
-            "noUserInputText": "Skills used in this position: HTML, Smarty, CSS, Vue.js, jQuery, Php, MySQL with PDO and TDD"
+            "noUserInputText": "Skills used in this position: HTML, Smarty, CSS, Vue.js, jQuery, Php, MySQL with PDO and TDD (with PhpUnit on the backend and QUnit on the frontend)"
 					},
           {
             "noUserInputText": "Generated new ideas for the new public reservation mobile application by learning Flutter in 2 weeks and building proof-of- concept Android and IOS applications in another 2 weeks"
