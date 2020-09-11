@@ -18,7 +18,7 @@ class Contact extends React.Component {
 							key={index} 
 							className="pr-3 pt-3 pb-3 flex">
 							<img 
-                className="inline-block w-auto m-auto p-1 h-10"
+                className="inline-block w-auto m-auto h-10"
 								src={contactmethod.logo} alt={contactmethod.alt} 
 								/>
 							<div 
