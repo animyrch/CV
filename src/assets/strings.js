@@ -10,19 +10,19 @@ const strings = {
 		"contact": {
 			"text": "Get In Touch",
 			"alt": "Here are some methods of contacting me",
-			"image": "/assets/contact5.png"
+			"image": "/contact5.png"
 		},
 	},
 	"content": {
 		"name": "Emir Gökhan ÖZÇELİK",
 		"myphoto": {
-			"image": '/assets/MyPhoto.png',
+			"image": '/MyPhoto.png',
 			"alt": "my photo"
 		},
 		"title": "Full-Stack Developer",
 		"personal": "33 years old, Turkish, located in Toulouse, France, relocation possible to anywhere in the World",
 		"missionTitle": "Mission",
-    "aboutMePointMarker": '/assets/check.png',
+    "aboutMePointMarker": '/check.png',
 		"aboutMePoints": [
       "33-year-old full stack-oriented developer passionate about his work with <strong>4 years of experience in developing applications</strong> after 12 years of experience in English, French and Turkish translation industry",
       "Fueled by job ownership and company citizenship, <strong>takes initiative to bring new ideas to the table</strong> with collective success in mind",
@@ -39,32 +39,32 @@ const strings = {
 		"subdetailsheader": "Highlights:",
 		"contactmethods": [
 			{
-				"logo": "/assets/phone.png",
+				"logo": "/phone.png",
 				"alt": "my telepĥone",
         "noUserInputText": "<a class='inline-block w-full' href='tel:+33603240059'>(0033) 603240059</a>"
 			},
 			{
-				"logo": "/assets/mail.png",
+				"logo": "/mail.png",
 				"alt": "my e-mail",
 				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='mailto:emirgokhanozcelik@gmail.com'>emirgokhanozcelik@gmail.com</a>"
 			},
 			{
-				"logo": "/assets/website.png",
+				"logo": "/website.png",
 				"alt": "my website",
 				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://www.emirdev.com'>emirdev.com</a>"
 			},
 			{
-				"logo": "/assets/in.png",
+				"logo": "/in.png",
 				"alt": "my linkedin profile",
 				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://linkedin.com/in/emirozcelik'>/emirozcelik</a>"
 			},
 			{
-				"logo": "/assets/github.png",
+				"logo": "/github.png",
 				"alt": "my github",
 				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='https://github.com/animyrch'>/animyrch</a>"
 			},
 			{
-				"logo": "/assets/download.png",
+				"logo": "/download.png",
 				"alt": "Download this as CV",
 				"noUserInputText": "<a class='inline-block w-full' target='_blank' href='/EmirOZCELIK-CV.pdf' download>Download this as CV</a>"
 			},
@@ -269,19 +269,19 @@ const strings = {
 		"hobbieslist": [
 			{
 				"name": "Gaming",
-				"image": "/assets/game.png"
+				"image": "/game.png"
 			},
 			{
 				"name": "Literature",
-				"image": "/assets/book.png"
+				"image": "/book.png"
 			},
 			{
 				"name": "Learning",
-				"image": "/assets/glasses.png"
+				"image": "/glasses.png"
 			},
 			{
 				"name": "Coding",
-				"image": "/assets/code.png"
+				"image": "/code.png"
 			}
 		]
 	}
