@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../assets/strings';
 import GetInTouchIndicator from './GetInTouchIndicator';
+import { Link } from 'react-router-dom';
 
 class CvMenu extends React.Component {
 	constructor(props) {
@@ -59,13 +60,16 @@ class CvMenu extends React.Component {
 
 	navMenuItem = (onClickMethod, bindValue, itemText) => {
 			return (
-			<div 
-        className={"bg-teal-500 text-xl font-medium pb-2 xl:flex-grow xl:pl-10 xl:pt-2 " + (itemText === strings.navigation.contact.text ? "xl:hidden" : "")} 
-				onClick={onClickMethod.bind(this, bindValue)}
-				>
-				<span>{itemText}</span>
-        {this.pageIndicator(bindValue)}
-			</div>
+				<Link
+					to={`/${itemText}`}>
+					<div 
+			className={"bg-teal-500 text-xl font-medium pb-2 xl:flex-grow xl:pl-10 xl:pt-2 " + (itemText === strings.navigation.contact.text ? "xl:hidden" : "")} 
+					onClick={onClickMethod.bind(this, bindValue)}
+					>
+						<span>{itemText}</span>
+				{this.pageIndicator(bindValue)}
+					</div>
+				</Link>
 			);
 	}
 
