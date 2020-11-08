@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import CvMenu from './components/CvMenu';
+import CvMenu from './components/common/CvMenu';
 import AboutMe from './components/AboutMe';
 import AboutMeFile from './components/AboutMeFile';
 import MissionFile from './components/MissionFile';
@@ -10,7 +10,7 @@ import Education from './components/Education';
 import EducationFile from './components/EducationFile';
 import Skills from './components/Skills';
 import SkillsFile from './components/SkillsFile';
-import CvFooter from './components/CvFooter';
+import CvFooter from './components/common/CvFooter';
 import Contact from './components/Contact';
 import ContactFile from './components/ContactFile';
 import FileSeparator from './components/FileSeparator';
@@ -23,12 +23,6 @@ class App extends React.Component {
 			page: 1,
 			contactOpen: false
 		};
-	}
-
-	updatePage = (page) => {
-		if (page !== this.state.page) {
-			this.setState({ page });
-		}
 	}
 
 	goToNextPage = () => {
@@ -73,7 +67,6 @@ class App extends React.Component {
 					<div className="App mobile-view p-3 xl:p-0 text-lg text-gray-800">
 						{this.displayContactModal()}
 						<CvMenu 
-							updatePage={this.updatePage} 
 							toggleContactModal={this.toggleContactModalState} 
 							/>
 						{this.buildBody()}

@@ -29,7 +29,7 @@ ul .bullet:before{
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background: url('assets/whitedot.png');
+	background: url('/src/assets/whitedot.png');
 	background-size: 100%;
 }
 
@@ -61,6 +61,10 @@ ul .bullet-file:before{
 
 .header-pin {
 	transform: translateY(0);
+}
+
+.bg-menu-back, .bg-menu-indicator{
+	background: center;
 }
 
   /* Hamburger */

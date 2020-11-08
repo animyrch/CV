@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import strings from '../assets/strings';
+import strings from '../../assets/strings';
 
 class CvFooter extends React.Component {
 

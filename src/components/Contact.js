@@ -1,7 +1,7 @@
 import React from 'react';
 import strings from '../assets/strings';
 import PropTypes from 'prop-types';
-import GetInTouchIndicator from './GetInTouchIndicator';
+import GetInTouchIndicator from './common/GetInTouchIndicator';
 
 class Contact extends React.Component {
 	
