@@ -14,33 +14,26 @@ import CvFooter from './components/common/CvFooter';
 import Contact from './components/Contact';
 import ContactFile from './components/ContactFile';
 import FileSeparator from './components/FileSeparator';
+import strings from './assets/strings';
 
 class App extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			page: 1,
-			contactOpen: false
+			contactOpen: false,
+			page: window.location.pathname.replace('/', '')
 		};
-	}
-
-	goToNextPage = () => {
-		this.setState({page: this.state.page+1});
-	}
-
-	goToPreviousPage = () => {
-		this.setState({page: this.state.page-1});
 	}
 
 	buildBody = () => {
 		return <span>
 				<Switch>
 					<Route exact={true} path="/" component={AboutMe} />
-					<Route path="/About Me" component={AboutMe} />
-					<Route path="/Skills" component={Skills} />
-					<Route path="/Education" component={Education} />
-					<Route path="/Professional Experience" component={WorkExperience} />
+					<Route path="/me" component={AboutMe} />
+					<Route path="/skills" component={Skills} />
+					<Route path="/education" component={Education} />
+					<Route path="/work" component={WorkExperience} />
 					<Route path="*" render={() => 
 						<div>You have just discovered my secret talents</div>
 					} />
@@ -60,6 +53,12 @@ class App extends React.Component {
 		}
 	}
 
+	updatePage = (page) => {
+		if (this.state.page !== page) {
+			this.setState({page});
+		}
+	}
+
 	render() {
 		return (
 			<Router>
@@ -67,14 +66,15 @@ class App extends React.Component {
 					<div className="App mobile-view p-3 xl:p-0 text-lg text-gray-800">
 						{this.displayContactModal()}
 						<CvMenu 
-							toggleContactModal={this.toggleContactModalState} 
+							toggleContactModal={this.toggleContactModalState}
+							currentPage={this.state.page}
+							updatePage={this.updatePage}
 							/>
 						{this.buildBody()}
-						<CvFooter 
-							page={this.state.page} 
-							goToNextPage={this.goToNextPage} 
-							goToPreviousPage={this.goToPreviousPage}
-							toggleContactModal={this.toggleContactModalState}       
+						<CvFooter
+							toggleContactModal={this.toggleContactModalState}
+							currentPage={this.state.page}
+							updatePage={this.updatePage}
 							/>
 					</div>
 				

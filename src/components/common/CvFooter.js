@@ -1,62 +1,86 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../../assets/strings';
+import { Link } from 'react-router-dom';
 
 class CvFooter extends React.Component {
 
-	goBackInNavigation = () => {
-		if (this.props.page > 1) {
-			return (
-			<button 
-				onClick={this.props.goToPreviousPage.bind(this)} 
-        className="nav-button arrow-left flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none xl:hidden" 
-				/>
-			);
-		} else {
-			return (
-        <div className="w-1/3 xl:hidden" />
-			);
+	menuItems = [ // duplicate
+		{
+			href: 'me',
+			text: strings.navigation.me
+		},
+		{
+			href: 'work',
+			text: strings.navigation.work
+		},
+		{
+			href: 'education',
+			text: strings.navigation.education
+		},
+		{
+			href: 'skills',
+			text: strings.navigation.skills
 		}
-	}
+	];
 
-	buildContinueNavigation = () => { 
-		if (this.props.page < 4) {
-			return (
-        <button 
-          onClick={this.props.goToNextPage.bind(this)} 
-          className="nav-button arrow-right flex items-center bg-teal-500 rounded-lg h-10 w-1/3 focus:outline-none text-white xl:hidden">
-        </button>
-			)
+	buildContinueNavigation = () => {
+		let nextPage = '';
+		let nextPageName = '';
+		switch (this.props.currentPage) {
+			case this.menuItems[0].href:
+				nextPage = this.menuItems[1].href;
+				nextPageName = this.menuItems[1].text;
+				break;
+			case this.menuItems[1].href:
+				nextPage = this.menuItems[2].href;
+				nextPageName = this.menuItems[2].text;
+				break;
+			case this.menuItems[2].href:
+				nextPage = this.menuItems[3].href;
+				nextPageName = this.menuItems[3].text;
+				break;
+			case strings.navigation.skills:
+				return '';
+			default:
+				break;
 		}
+		return (
+			<div className="m-auto"
+				onClick={this.props.updatePage.bind(this, nextPage)}>
+				<Link to={nextPage}>
+					<div className="text-white p-3 rounded-full bg-teal-700">
+						<span>See My {nextPageName}</span>
+					</div>
+				</Link>
+			</div>
+		);
 	}
 
 	contactButton = () => {
-		if (this.props.page === 4) {
-			return (
-        <div className="-ml-5 -mt-5 xl:hidden">
-			  <input 
-				  className="arrow-right h-16 block" 
-				  type="image" 
-				  src={strings.navigation.contact.image} 
-				  alt="My contact information"
-				  onClick={this.props.toggleContactModal.bind(this)} 
-				  />
-          <strong>{strings.navigation.contact.text}</strong> 
-      </div>
-			);
-		}
+		return (
+			<div className="m-auto">
+					<input 
+						className="h-16 block" 
+						type="image" 
+						src={strings.navigation.contact.image} 
+						alt="My contact information"
+						onClick={this.props.toggleContactModal.bind(this)} 
+						/>
+				<strong>{strings.navigation.contact.text}</strong> 
+			</div>
+		);
 	}
 
 	render() {
 		return (
 			<div>
 				<footer id="cv-footer" className="flex content-center mt-12 text-center">
-
-          <div className="w-1/3 hidden xl:block" />
-					{this.goBackInNavigation()}
-          <div className="page-number w-1/3 xl:hidden">{this.props.page}/4</div>
-					{this.buildContinueNavigation()}
-          {this.contactButton()}
+					{(
+					this.props.currentPage === this.menuItems[3].href ?
+						this.contactButton() :
+						this.buildContinueNavigation()
+					)}
 				</footer>
 			</div>
 		);
@@ -64,10 +88,9 @@ class CvFooter extends React.Component {
 }
 
 CvFooter.propTypes = {
-	page: PropTypes.number.isRequired,
-	goToNextPage: PropTypes.func.isRequired,
-	goToPreviousPage: PropTypes.func.isRequired,
-	toggleContactModal: PropTypes.func.isRequired
+	toggleContactModal: PropTypes.func.isRequired,
+	currentPage: PropTypes.string.isRequired,
+	updatePage: PropTypes.func.isRequired
 }
 
 export default CvFooter;

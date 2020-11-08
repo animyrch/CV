@@ -36,7 +36,7 @@ class Contact extends React.Component {
 		return (
 		<div 
 			id="popup" 
-			className="overlay fixed bottom-0 left-0 right-0 top-0 w-full m-h-screen z-40 bg-black bg-opacity-25 overflow-scroll " 
+			className="overlay fixed bottom-0 left-0 right-0 top-0 w-full m-h-screen z-50 bg-black bg-opacity-25 overflow-scroll " 
 			onClick={this.props.toggleContactModal.bind(this)} 
 			>
       <GetInTouchIndicator mt="mt-80"/>
