@@ -55,7 +55,7 @@ class CvMenu extends React.Component {
 
 	navMenu = () => {
 		return <div className={(this.state.hamburgerFlipped ? "flex " : "hidden xl:flex ")  + "flex-col h-screen"}>
-			<nav id="main-menu" className="relative text-center mt-10 z-30 py-4 xl:px-16 xl:bg-menu-back bg-no-repeat xl:mt-0 xl:z-0 xl:absolute xl:right-0 xl:top-0">
+			<nav id="main-menu" className="bg-no-repeat relative text-center mt-10 z-30 xl:py-4 xl:px-16 xl:bg-menu-back xl:mt-0 xl:z-0 xl:absolute xl:right-0 xl:top-0">
 				<div className={`page-indicator hidden top-0 right-0 absolute ${this.pageIndicatorPosition()} mt-12 w-8 h-8 bg-white transform rotate-45 xl:block`}></div>
 				<ul>
 					{this.menuItems.map(menuItem => {
