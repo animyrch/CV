@@ -28,10 +28,6 @@ class CvFooter extends React.Component {
 		let nextPage = '';
 		let nextPageName = '';
 		switch (this.props.currentPage) {
-			case this.menuItems[0].href:
-				nextPage = this.menuItems[1].href;
-				nextPageName = this.menuItems[1].text;
-				break;
 			case this.menuItems[1].href:
 				nextPage = this.menuItems[2].href;
 				nextPageName = this.menuItems[2].text;
@@ -42,15 +38,17 @@ class CvFooter extends React.Component {
 				break;
 			case strings.navigation.skills:
 				return '';
+			case this.menuItems[0].href:
 			default:
-				break;
+				nextPage = this.menuItems[1].href;
+				nextPageName = this.menuItems[1].text;
 		}
 		return (
 			<div className="m-auto"
 				onClick={this.props.updatePage.bind(this, nextPage)}>
 				<Link to={nextPage}>
 					<div className="text-white p-3 rounded-full bg-teal-700">
-						<span>See My {nextPageName}</span>
+						<span>{strings.navigation.see} {nextPageName}</span>
 					</div>
 				</Link>
 			</div>

@@ -14,7 +14,6 @@ import CvFooter from './components/common/CvFooter';
 import Contact from './components/Contact';
 import ContactFile from './components/ContactFile';
 import FileSeparator from './components/FileSeparator';
-import strings from './assets/strings';
 
 class App extends React.Component {
 
