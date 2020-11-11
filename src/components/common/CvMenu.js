@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import strings from '../../assets/strings';
 import GetInTouchIndicator from './GetInTouchIndicator';
 import { Link } from 'react-router-dom';
 
-class CvMenu extends React.Component {
-	menuItems = [
+function CvMenu (props) {
+	const menuItems = [
 		{
 			href: 'me',
 			text: strings.navigation.me
@@ -24,58 +24,50 @@ class CvMenu extends React.Component {
 		}
 	];
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			hamburgerFlipped: false
-		};
-	}
+	const [hamburgerFlipped, setHamburger] = useState(false);
 
-	flipHamburger = () => {
-		const hamburgerOpen = this.state.hamburgerFlipped;
-		if (!hamburgerOpen) {
+	const flipHamburger = () => {
+		if (!hamburgerFlipped) {
 			window.scrollTo(0, 0);
 		}
-		this.setState({
-			hamburgerFlipped: !hamburgerOpen
-		});
+		setHamburger(!hamburgerFlipped);
 	}
 
-	displayClickOutsideDiv = () => {
-		if (this.state.hamburgerFlipped) {
+	const displayClickOutsideDiv = () => {
+		if (hamburgerFlipped) {
 			return (
 				<div 
-				onClick={this.flipHamburger.bind(this)} 
+				onClick={flipHamburger()} 
 				className="bg-transparent z-20 flex-1 overflow-auto xl:hidden"
 				/>
 			);
 		}
 	}
 
-	navMenu = () => {
-		return <div className={(this.state.hamburgerFlipped ? "flex " : "hidden xl:flex ")  + "flex-col h-screen"}>
-			{this.contactButton()}
+	const navMenu = () => {
+		return <div className={(hamburgerFlipped ? "flex " : "hidden xl:flex ")  + "flex-col h-screen"}>
+			{contactButton()}
 			<nav id="main-menu" className="bg-no-repeat relative text-center mt-10 z-30 xl:py-4 xl:px-16 xl:bg-menu-back xl:mt-0 xl:z-0 xl:absolute xl:right-0 xl:top-0">
-				<div className={`page-indicator hidden top-0 right-0 absolute ${this.pageIndicatorPosition()} mt-12 w-8 h-8 bg-white transform rotate-45 xl:block`}></div>
+				<div className={`page-indicator hidden top-0 right-0 absolute ${pageIndicatorPosition()} mt-12 w-8 h-8 bg-white transform rotate-45 xl:block`}></div>
 				<ul>
-					{this.menuItems.map(menuItem => {
-						const menuItemMethod = this.clickedOnPage.bind(this, menuItem.href);
+					{menuItems.map(menuItem => {
+						const menuItemMethod = clickedOnPage(menuItem.href);
 						return (
 							<Link to={menuItem.href}>
-								{this.navMenuItem(menuItem.text, menuItemMethod)}
+								{navMenuItem(menuItem.text, menuItemMethod)}
 							</Link>
 						);
 					})}
 					<span className="xl:hidden">
-						{this.navMenuItem(strings.navigation.contact.text, this.props.toggleContactModal.bind(this))}
+						{navMenuItem(strings.navigation.contact.text, props.toggleContactModal)}
 					</span>
 				</ul>
 			</nav>
-			{this.displayClickOutsideDiv() }
+			{ displayClickOutsideDiv() }
 		</div>;
 	}
 
-	navMenuItem = (text, menuItemMethod) => {
+	const navMenuItem = (text, menuItemMethod) => {
 		return (
 			<li 
 				key={text}
@@ -91,29 +83,29 @@ class CvMenu extends React.Component {
 		);
 	}
 
-	pageIndicatorPosition = () => {
-		switch (this.props.currentPage) {
-			case this.menuItems[1].href:
+	const pageIndicatorPosition = () => {
+		switch (props.currentPage) {
+			case menuItems[1].href:
 				return 'mr-121';
-			case this.menuItems[2].href:
+			case menuItems[2].href:
 				return 'mr-65';	
-			case this.menuItems[3].href:
+			case menuItems[3].href:
 				return 'mr-26';	
 			default:
 				return 'mr-130';
 		}
 	}
 
-	clickedOnPage = (page) => {
-		this.props.updatePage(page);
-		this.flipHamburger();
+	const clickedOnPage = (page) => () => {
+		props.updatePage(page);
+		flipHamburger();
 	}
 
-	contactButton = () => {
+	const contactButton = () => {
 		return (    
 			<div className="">
 				<div
-					onClick={this.props.toggleContactModal.bind(this)}
+					onClick={props.toggleContactModal}
 					className="hidden xl:block">
 					<GetInTouchIndicator 
 						mt="-mt-20"
@@ -123,22 +115,22 @@ class CvMenu extends React.Component {
 		);
 	}
 
-	navMenuMobile = () => {
+	const navMenuMobile = () => {
 		return (
 			<nav 
 				className="fixed top-0 left-0 p-2 pt-4 bg-white w-full z-20 xl:hidden"
 				>
-				{this.menuButtonMobile()}
-				{this.contactButtonMobile()}
+				{menuButtonMobile()}
+				{contactButtonMobile()}
 			</nav>
 		);
 	}
 
 
-	contactButtonMobile = () => {
+	const contactButtonMobile = () => {
 		return (
 		<div
-			onClick={this.props.toggleContactModal.bind(this)}
+			onClick={props.toggleContactModal}
 			className="contact-image-container flex items-center flex-no-shrink mr-6 w-16 mt-1 xl:hidden"
 			>
 			<img className="-mt-2" src={strings.navigation.contact.image} alt="My contact information" />
@@ -146,26 +138,23 @@ class CvMenu extends React.Component {
 		);
 	}
 
-	menuButtonMobile = () => {
+	const menuButtonMobile = () => {
 		return (
 		<div 
 			className="w-12 fixed right-0 mt-3" 
-			onClick={this.flipHamburger}
+			onClick={flipHamburger}
 			>
-			<div className={`hamburger ${this.state.hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
+			<div className={`hamburger ${hamburgerFlipped ? 'hamburger-open' : ''}`}></div>
 		</div>
 		);
 	}
 	
-
-	render() {
-		return (
-			<div className="h-10">
-				{this.navMenuMobile()}
-				{this.navMenu()}
-			</div>
-        );
-    }
+	return (
+		<div className="h-10">
+			{navMenuMobile()}
+			{navMenu()}
+		</div>
+	);
 };
 
 
