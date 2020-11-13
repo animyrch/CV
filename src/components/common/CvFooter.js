@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import strings from '../../assets/strings';
+import { getNextPageInfo } from '../../redux/appPages';
 import { Link } from 'react-router-dom';
 
 class CvFooter extends React.Component {
@@ -25,24 +26,7 @@ class CvFooter extends React.Component {
 	];
 
 	buildContinueNavigation = () => {
-		let nextPage = '';
-		let nextPageName = '';
-		switch (this.props.currentPage) {
-			case this.menuItems[1].href:
-				nextPage = this.menuItems[2].href;
-				nextPageName = this.menuItems[2].text;
-				break;
-			case this.menuItems[2].href:
-				nextPage = this.menuItems[3].href;
-				nextPageName = this.menuItems[3].text;
-				break;
-			case strings.navigation.skills:
-				return '';
-			case this.menuItems[0].href:
-			default:
-				nextPage = this.menuItems[1].href;
-				nextPageName = this.menuItems[1].text;
-		}
+		const { nextPage, nextPageName } = getNextPageInfo(this.props.currentPage);
 		return (
 			<div className="m-auto"
 				onClick={this.props.updatePage.bind(this, nextPage)}>
